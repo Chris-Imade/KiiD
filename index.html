@@ -20,6 +20,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom-logo.css" />
+    <link rel="stylesheet" href="assets/css/loading-indicator.css" />
   </head>
 
   <body>
@@ -123,9 +124,6 @@
 
           <!-- actions -->
           <div class="ul-header-actions">
-            <button class="ul-header-search-opener">
-              <i class="flaticon-search"></i>
-            </button>
             <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
               ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
               Get Involved
@@ -1118,7 +1116,7 @@
               <div class="ul-footer-top-contact-info-txt">
                 <span class="ul-footer-top-contact-info-label">Contact Us</span>
                 <h5 class="ul-footer-top-contact-info-address">
-                  <a href="tel:+2348000000000">+234 902 994 0489</a>
+                  <a href="tel:+2349029940489">+234 902 994 0489</a>
                 </h5>
               </div>
             </div>
@@ -1183,11 +1181,11 @@
                 <a href="mailto:info@kiid.org"
                   ><i class="flaticon-mail"></i> info@kiid.org</a
                 >
-                <a href="tel:+2348000000000"
-                  ><i class="flaticon-telephone-call"></i> +234 800 000 0000</a
+                <a href="tel:+2349029940489"
+                  ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
                 >
               </div>
-              <form action="index.html#" class="ul-nwsltr-form">
+              <form class="ul-nwsltr-form">
                 <div class="top">
                   <input
                     type="email"
@@ -1195,6 +1193,7 @@
                     id="nwsltr-email"
                     placeholder="Your Email Address"
                     class="ul-nwsltr-input"
+                    required
                   />
                   <button type="submit"><i class="flaticon-next"></i></button>
                 </div>
@@ -1205,14 +1204,14 @@
                       type="checkbox"
                       name="agreement"
                       id="nwsltr-agreement"
-                      hidden
+                      required
                     />
                     <span class="ul-checkbox"
                       ><i class="flaticon-tick"></i
                     ></span>
                     <span class="ul-checkbox-txt"
                       >I agree with the
-                      <a href="index.html#">Privacy Policy</a></span
+                      <a href="privacy-policy.html">Privacy Policy</a></span
                     >
                   </label>
                 </div>
@@ -1245,7 +1244,7 @@
             </p>
             <div class="ul-footer-bottom-nav">
               <a href="index.html#">Terms & Conditions</a>
-              <a href="index.html#">Privacy Policy</a>
+              <a href="privacy-policy.html">Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -1280,5 +1279,6 @@
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
     <script src="assets/js/donate-form.js"></script>
+    <script src="assets/js/form-handler.js"></script>
   </body>
 </html>

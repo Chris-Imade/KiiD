@@ -22,6 +22,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom-logo.css" />
+    <link rel="stylesheet" href="assets/css/loading-indicator.css" />
   </head>
 
   <body>
@@ -222,7 +223,7 @@
         </div>
 
         <div class="ul-inner-contact-container">
-          <form action="contact.html#" class="ul-contact-form ul-form">
+          <form class="ul-contact-form ul-form">
             <div class="row row-cols-2 row-cols-xxs-1 ul-bs-row">
               <div class="col">
                 <div class="form-group">
@@ -231,6 +232,7 @@
                     name="name"
                     id="ul-contact-name"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
               </div>
@@ -241,6 +243,7 @@
                     name="email"
                     id="ul-contact-email"
                     placeholder="Email Address"
+                    required
                   />
                 </div>
               </div>
@@ -251,6 +254,7 @@
                     name="subject"
                     id="ul-contact-subject"
                     placeholder="Subject"
+                    required
                   />
                 </div>
               </div>
@@ -260,11 +264,12 @@
                     name="message"
                     id="ul-contact-msg"
                     placeholder="Type your message"
+                    required
                   ></textarea>
                 </div>
               </div>
               <div class="col-12 text-center">
-                <button class="ul-btn">
+                <button type="submit" class="ul-btn">
                   <i
                     class="flaticon-fast-forward-double-right-arrows-symbol"
                   ></i>
@@ -398,7 +403,7 @@
                   ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
                 >
               </div>
-              <form action="contact.html#" class="ul-nwsltr-form">
+              <form class="ul-nwsltr-form">
                 <div class="top">
                   <input
                     type="email"
@@ -406,6 +411,7 @@
                     id="nwsltr-email"
                     placeholder="Your Email Address"
                     class="ul-nwsltr-input"
+                    required
                   />
                   <button type="submit"><i class="flaticon-next"></i></button>
                 </div>
@@ -416,14 +422,14 @@
                       type="checkbox"
                       name="agreement"
                       id="nwsltr-agreement"
-                      hidden
+                      required
                     />
                     <span class="ul-checkbox"
                       ><i class="flaticon-tick"></i
                     ></span>
                     <span class="ul-checkbox-txt"
                       >I agree with the
-                      <a href="contact.html#">Privacy Policy</a></span
+                      <a href="privacy-policy.html">Privacy Policy</a></span
                     >
                   </label>
                 </div>
@@ -456,7 +462,7 @@
             </p>
             <div class="ul-footer-bottom-nav">
               <a href="contact.html#">Terms & Conditions</a>
-              <a href="contact.html#">Privacy Policy</a>
+              <a href="privacy-policy.html">Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -488,8 +494,8 @@
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tab.js"></script>
-    <!-- <script src="assets/js/countdown.js"></script> -->
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/form-handler.js"></script>
   </body>
 </html>

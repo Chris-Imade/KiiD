@@ -22,6 +22,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom-logo.css" />
+    <link rel="stylesheet" href="assets/css/loading-indicator.css" />
   </head>
 
   <body>
@@ -719,7 +720,7 @@
                   ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
                 >
               </div>
-              <form action="about.html#" class="ul-nwsltr-form">
+              <form class="ul-nwsltr-form">
                 <div class="top">
                   <input
                     type="email"
@@ -727,6 +728,7 @@
                     id="nwsltr-email"
                     placeholder="Your Email Address"
                     class="ul-nwsltr-input"
+                    required
                   />
                   <button type="submit"><i class="flaticon-next"></i></button>
                 </div>
@@ -737,14 +739,14 @@
                       type="checkbox"
                       name="agreement"
                       id="nwsltr-agreement"
-                      hidden
+                      required
                     />
                     <span class="ul-checkbox"
                       ><i class="flaticon-tick"></i
                     ></span>
                     <span class="ul-checkbox-txt"
                       >I agree with the
-                      <a href="about.html#">Privacy Policy</a></span
+                      <a href="privacy-policy.html">Privacy Policy</a></span
                     >
                   </label>
                 </div>
@@ -809,8 +811,8 @@
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tab.js"></script>
-    <!-- <script src="assets/js/countdown.js"></script> -->
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/form-handler.js"></script>
   </body>
 </html>
