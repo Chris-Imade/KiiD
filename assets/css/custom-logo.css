@@ -1,0 +1,34 @@
+.custom-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.custom-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.custom-logo .logo-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  margin-left: 8px;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.custom-logo.white .logo-text {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-logo img {
+    height: 32px;
+  }
+
+  .custom-logo .logo-text {
+    font-size: 20px;
+  }
+}
