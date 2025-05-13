@@ -179,17 +179,15 @@
         </div>
 
         <div class="ul-sidebar-footer-social">
-          <a href="https://facebook.com" target="_blank"
-            ><i class="flaticon-facebook"></i
-          ></a>
-          <a href="https://twitter.com" target="_blank"
+          <a
+            href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+            target="_blank"
             ><i class="flaticon-twitter"></i
           ></a>
-          <a href="https://instagram.com" target="_blank"
+          <a
+            href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+            target="_blank"
             ><i class="flaticon-instagram"></i
-          ></a>
-          <a href="https://youtube.com" target="_blank"
-            ><i class="flaticon-youtube"></i
           ></a>
         </div>
       </div>
@@ -321,9 +319,16 @@
                 >
                   <span class="news-date">March 5, 2023</span>
                   <div class="social-share">
-                    <a href="#"><i class="flaticon-facebook"></i></a>
-                    <a href="#"><i class="flaticon-twitter"></i></a>
-                    <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                    <a
+                      href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+                      target="_blank"
+                      ><i class="flaticon-twitter"></i
+                    ></a>
+                    <a
+                      href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+                      target="_blank"
+                      ><i class="flaticon-instagram"></i
+                    ></a>
                   </div>
                 </div>
 
@@ -629,17 +634,15 @@
                 empowerment.
               </p>
               <div class="ul-footer-socials">
-                <a href="https://facebook.com" target="_blank"
-                  ><i class="flaticon-facebook"></i
-                ></a>
-                <a href="https://twitter.com" target="_blank"
+                <a
+                  href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+                  target="_blank"
                   ><i class="flaticon-twitter"></i
                 ></a>
-                <a href="https://linkedin.com" target="_blank"
-                  ><i class="flaticon-linkedin-big-logo"></i
-                ></a>
-                <a href="https://youtube.com" target="_blank"
-                  ><i class="flaticon-youtube"></i
+                <a
+                  href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+                  target="_blank"
+                  ><i class="flaticon-instagram"></i
                 ></a>
               </div>
             </div>
@@ -758,17 +761,12 @@
             let shareUrl = "";
 
             // Determine which platform to share on
-            if (platform.includes("facebook")) {
-              shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${newsTitle}`;
-            } else if (platform.includes("twitter")) {
+            if (platform.includes("twitter")) {
               shareUrl = `https://twitter.com/intent/tweet?text=${newsTitle}&url=${url}`;
-            } else if (platform.includes("linkedin")) {
-              shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-            }
-
-            // Open share dialog
-            if (shareUrl) {
               window.open(shareUrl, "_blank", "width=600,height=400");
+            } else if (platform.includes("instagram")) {
+              // Instagram doesn't have a direct sharing URL API like Twitter
+              alert("Please copy this link to share on Instagram: " + url);
             }
           });
         });
