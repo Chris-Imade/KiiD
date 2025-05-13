@@ -1033,7 +1033,6 @@ button {
   z-index: 1;
 }
 .ul-header .logo-container::before, .ul-header .logo-container::after {
-  content: "";
   position: absolute;
   z-index: -1;
   top: calc(0% - clamp(28px, 1.58vw, 30px));
