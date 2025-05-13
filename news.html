@@ -23,6 +23,234 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom-logo.css" />
     <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+
+    <style>
+      /* Custom styles for the news page */
+      .news-card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 2rem;
+        background-color: #fff;
+      }
+
+      .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .news-image {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .news-date {
+        color: #ebbf10;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .news-title {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .news-content {
+        color: #666;
+        line-height: 1.7;
+      }
+
+      .news-cta {
+        background-color: #f7f9fc;
+        padding: 3rem 0;
+        border-radius: 10px;
+        margin-bottom: 3rem;
+      }
+
+      .news-filter {
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .filter-btn {
+        padding: 8px 20px;
+        border: 1px solid #ebbf10;
+        border-radius: 30px;
+        background: transparent;
+        color: #333;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background-color: #ebbf10;
+        color: #fff;
+      }
+
+      .featured-news {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 3rem;
+      }
+
+      .featured-news-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: #fff;
+      }
+
+      .featured-news img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .featured-news-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .featured-news-date {
+        color: #ebbf10;
+        font-weight: 500;
+      }
+
+      .job-card {
+        background-color: #f7f9fc;
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-left: 5px solid #ebbf10;
+      }
+
+      .newsletter-section {
+        background-color: #ebbf10;
+        padding: 3rem 2rem;
+        border-radius: 10px;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+
+      .newsletter-form {
+        display: flex;
+        margin-top: 1.5rem;
+      }
+
+      .newsletter-input {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .newsletter-btn {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0 1.5rem;
+        border-radius: 0 5px 5px 0;
+        font-weight: 500;
+      }
+
+      .social-share {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .social-share a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+
+      .social-share a:hover {
+        background-color: #ebbf10;
+        color: #fff;
+      }
+
+      .upcoming-events {
+        margin-top: 3rem;
+      }
+
+      .event-card {
+        display: flex;
+        margin-bottom: 1.5rem;
+        background-color: #f7f9fc;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .event-date {
+        min-width: 80px;
+        background-color: #ebbf10;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+
+      .event-day {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .event-month {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .event-countdown {
+        font-size: 0.8rem;
+        background-color: #333;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-top: 5px;
+        text-align: center;
+      }
+
+      .event-details {
+        padding: 1rem 1.5rem;
+      }
+
+      .event-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .event-location {
+        color: #666;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    </style>
   </head>
 
   <body>
@@ -144,7 +372,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Our Programs</a>
-                <a href="news.html">News & Events</a>
+                <a href="news.html" class="active">News & Events</a>
 
                 <div class="has-sub-menu">
                   <a role="button">Get Involved</a>
@@ -198,13 +426,40 @@
       </section>
       <!-- BREADCRUMBS SECTION END -->
 
-      <!-- NEWS & EVENTS SECTION START -->
-      <section class="ul-section-spacing">
+      <!-- FEATURED NEWS SECTION START -->
+      <section class="ul-section-spacing pt-0">
         <div class="ul-container wow animate__fadeInUp">
-          <div class="ul-section-heading text-center">
+          <div class="featured-news" style="margin-top: 20px">
+            <img src="assets/img/donation-1.jpg" alt="Medical Outreach" />
+            <div class="featured-news-content">
+              <span class="featured-news-date">May 20, 2023</span>
+              <h2 class="featured-news-title">
+                Free Medical Outreach in Benin City
+              </h2>
+              <p>
+                We recently conducted a free medical outreach program in Benin
+                City, providing healthcare services to over 200 individuals from
+                underserved communities.
+              </p>
+              <a href="#" class="ul-btn mt-3"
+                ><i
+                  class="flaticon-fast-forward-double-right-arrows-symbol"
+                ></i>
+                Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FEATURED NEWS SECTION END -->
+
+      <!-- NEWS FILTER SECTION START -->
+      <section class="ul-section-spacing pt-0">
+        <div class="ul-container wow animate__fadeInUp">
+          <div class="ul-section-heading text-center mb-4">
             <div>
               <span class="ul-section-sub-title">Stay Updated</span>
-              <h2 class="ul-section-title">News & Recent Events</h2>
+              <h2 class="ul-section-title">Latest News & Events</h2>
               <p class="ul-section-descr">
                 Keep up with the latest news, events, and activities from
                 Kingscity Initiative for Integrated Development.
@@ -212,131 +467,239 @@
             </div>
           </div>
 
-          <div class="row mt-5">
-            <div class="col-lg-8 mx-auto">
-              <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body p-4">
-                  <h5 class="text-muted mb-1">May 20, 2023</h5>
-                  <h3 class="mb-3">Free Medical Outreach in Benin City</h3>
-                  <p>
+          <div class="news-filter">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Health</button>
+            <button class="filter-btn">Environment</button>
+            <button class="filter-btn">Education</button>
+            <button class="filter-btn">Empowerment</button>
+          </div>
+
+          <div class="row">
+            <!-- News Card 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card shadow-sm">
+                <img
+                  src="assets/img/donation-1.jpg"
+                  alt="Medical Outreach"
+                  class="news-image"
+                />
+                <div class="p-4">
+                  <span class="news-date">May 20, 2023</span>
+                  <h3 class="news-title">
+                    Free Medical Outreach in Benin City
+                  </h3>
+                  <p class="news-content">
                     We recently conducted a free medical outreach program in
                     Benin City, providing healthcare services to over 200
-                    individuals from underserved communities. Services included
-                    health screenings, consultations, and medication
-                    distribution.
+                    individuals...
                   </p>
-                  <div class="text-center mt-4">
-                    <img
-                      src="assets/img/donation-1.jpg"
-                      alt="Medical Outreach"
-                      class="img-fluid rounded mb-3"
-                      style="max-height: 400px"
-                    />
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-4"
+                  >
+                    <a href="news/medical-outreach.html" class="ul-btn-sm"
+                      >Read More</a
+                    >
+                    <div class="social-share">
+                      <a href="#"><i class="flaticon-facebook"></i></a>
+                      <a href="#"><i class="flaticon-twitter"></i></a>
+                      <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                    </div>
                   </div>
-                  <p>
-                    The outreach focused on preventive healthcare and early
-                    detection of common health conditions. Our team of volunteer
-                    healthcare professionals worked tirelessly to ensure that
-                    everyone received quality care and guidance on maintaining
-                    good health.
-                  </p>
                 </div>
               </div>
+            </div>
 
-              <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body p-4">
-                  <h5 class="text-muted mb-1">April 10, 2023</h5>
-                  <h3 class="mb-3">Environmental Awareness Workshop</h3>
-                  <p>
+            <!-- News Card 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card shadow-sm">
+                <img
+                  src="assets/img/donation-2.jpg"
+                  alt="Environmental Workshop"
+                  class="news-image"
+                />
+                <div class="p-4">
+                  <span class="news-date">April 10, 2023</span>
+                  <h3 class="news-title">Environmental Awareness Workshop</h3>
+                  <p class="news-content">
                     KiiD organized an environmental awareness workshop targeting
                     youth in Abuja. The workshop focused on practical ways to
-                    protect the environment, including waste management,
-                    recycling, and tree planting initiatives.
+                    protect...
                   </p>
-                  <div class="text-center mt-4">
-                    <img
-                      src="assets/img/donation-2.jpg"
-                      alt="Environmental Workshop"
-                      class="img-fluid rounded mb-3"
-                      style="max-height: 400px"
-                    />
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-4"
+                  >
+                    <a href="news/environmental-workshop.html" class="ul-btn-sm"
+                      >Read More</a
+                    >
+                    <div class="social-share">
+                      <a href="#"><i class="flaticon-facebook"></i></a>
+                      <a href="#"><i class="flaticon-twitter"></i></a>
+                      <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                    </div>
                   </div>
-                  <p>
-                    Participants engaged in hands-on activities and discussions
-                    about climate change and its impact on local communities.
-                    Each participant pledged to plant at least five trees in
-                    their neighborhood.
-                  </p>
                 </div>
               </div>
+            </div>
 
-              <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body p-4">
-                  <h5 class="text-muted mb-1">March 5, 2023</h5>
-                  <h3 class="mb-3">Skills Acquisition Program Graduation</h3>
-                  <p>
+            <!-- News Card 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="news-card shadow-sm">
+                <img
+                  src="assets/img/donation-3.jpg"
+                  alt="Skills Graduation"
+                  class="news-image"
+                />
+                <div class="p-4">
+                  <span class="news-date">March 5, 2023</span>
+                  <h3 class="news-title">
+                    Skills Acquisition Program Graduation
+                  </h3>
+                  <p class="news-content">
                     We celebrated the graduation of 30 individuals from our
                     skills acquisition program in Enugu State. The graduates
-                    received training in various skills including tailoring,
-                    computer literacy, and entrepreneurship.
+                    received training...
                   </p>
-                  <div class="text-center mt-4">
-                    <img
-                      src="assets/img/donation-3.jpg"
-                      alt="Skills Graduation"
-                      class="img-fluid rounded mb-3"
-                      style="max-height: 400px"
-                    />
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-4"
+                  >
+                    <a href="news/skills-graduation.html" class="ul-btn-sm"
+                      >Read More</a
+                    >
+                    <div class="social-share">
+                      <a href="#"><i class="flaticon-facebook"></i></a>
+                      <a href="#"><i class="flaticon-twitter"></i></a>
+                      <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                    </div>
                   </div>
-                  <p>
-                    Each graduate was provided with a starter kit relevant to
-                    their field of training to help them start their own
-                    businesses. We will continue to provide mentorship and
-                    support to these graduates as they embark on their
-                    entrepreneurial journey.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- NEWS & EVENTS SECTION END -->
+      <!-- NEWS FILTER SECTION END -->
 
-      <!-- JOB VACANCIES SECTION START -->
+      <!-- UPCOMING EVENTS SECTION START -->
       <section class="ul-section-spacing pt-0">
         <div class="ul-container wow animate__fadeInUp">
-          <div class="ul-section-heading text-center">
+          <div class="ul-section-heading text-center mb-4">
             <div>
-              <span class="ul-section-sub-title">Career Opportunities</span>
-              <h2 class="ul-section-title">Job Vacancies</h2>
+              <span class="ul-section-sub-title">Mark Your Calendar</span>
+              <h2 class="ul-section-title">Upcoming Events</h2>
               <p class="ul-section-descr">
-                Join our team and make a difference in communities across
-                Nigeria.
+                Join us at our upcoming events and be part of our mission to
+                create positive change.
               </p>
             </div>
           </div>
 
-          <div class="row justify-content-center mt-5">
-            <div class="col-lg-8">
-              <div class="card border-0 shadow-sm">
-                <div class="card-body p-4 text-center">
-                  <h3 class="mb-4">No Vacancies at the Moment</h3>
-                  <p class="mb-3">
-                    We don't have any open positions right now, but please check
-                    back later for future opportunities.
-                  </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <!-- Featured Event -->
+              <article class="featured-event mb-4">
+                <div class="card border-0 shadow-sm h-100 bg-light">
+                  <div class="card-body p-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-3"
+                    >
+                      <span class="badge bg-primary px-3 py-2"
+                        >Featured Event</span
+                      >
+                      <span class="text-muted">July 10, 2023</span>
+                    </div>
+                    <h3 class="mb-3">Annual Healthcare & Climate Summit</h3>
+                    <p>
+                      Join us for our annual summit bringing together healthcare
+                      professionals, environmental activists, and community
+                      leaders to discuss integrated approaches to community
+                      development.
+                    </p>
+                    <div class="d-flex align-items-center mt-3">
+                      <i class="flaticon-pin me-2 text-primary"></i>
+                      <span>Conference Center, Benin City</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="flaticon-clock me-2 text-primary"></i>
+                      <span>9:00 AM - 4:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Event Card 1 -->
+              <div class="event-card">
+                <div class="event-date">
+                  <span class="event-day">15</span>
+                  <span class="event-month">Jun</span>
+                  <div class="event-countdown" data-date="2023-06-15"></div>
+                </div>
+                <div class="event-details">
+                  <h4 class="event-title">Community Health Fair</h4>
                   <p>
-                    If you're interested in volunteering with us, please visit
-                    our <a href="contact.html">Contact page</a> to get in touch.
+                    Free health screenings, consultations, and health education
+                    for community members.
                   </p>
+                  <div class="event-location">
+                    <i class="flaticon-pin"></i> Benin City, Edo State
+                  </div>
+                </div>
+              </div>
+
+              <!-- Event Card 2 -->
+              <div class="event-card">
+                <div class="event-date">
+                  <span class="event-day">22</span>
+                  <span class="event-month">Jun</span>
+                  <div class="event-countdown" data-date="2023-06-22"></div>
+                </div>
+                <div class="event-details">
+                  <h4 class="event-title">Tree Planting Initiative</h4>
+                  <p>
+                    Join our environmental restoration efforts as we plant trees
+                    in urban areas.
+                  </p>
+                  <div class="event-location">
+                    <i class="flaticon-pin"></i> Abuja FCT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="newsletter-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>
+                  Stay updated with our latest news, events, and initiatives.
+                  Join our mailing list today!
+                </p>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="Your Email Address"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+
+              <div id="job-vacancies" class="job-card">
+                <h3 class="mb-3 text-center">Job Vacancies</h3>
+                <p class="text-center mb-3">
+                  We don't have any open positions right now, but please check
+                  back later for future opportunities.
+                </p>
+                <div class="text-center">
+                  <a href="contact.html" class="ul-btn-sm">Volunteer With Us</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- JOB VACANCIES SECTION END -->
+      <!-- UPCOMING EVENTS SECTION END -->
 
       <!-- CTA SECTION START -->
       <section class="ul-cta">
@@ -468,6 +831,7 @@
               <div class="ul-footer-widget-links">
                 <a href="about.html">About Us</a>
                 <a href="services.html">Our Programs</a>
+                <a href="news.html">News & Events</a>
                 <a href="contact.html">Contact Us</a>
               </div>
             </div>
@@ -491,30 +855,63 @@
               </div>
             </div>
 
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">More Information</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="news.html">News & Events</a>
-                <a href="news.html#job-vacancies">Job Vacancies</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Get Involved</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@kiid.org"
+                  ><i class="flaticon-mail"></i> info@kiid.org</a
+                >
+                <a href="tel:+2349029940489"
+                  ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
+                >
               </div>
+              <form class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                    required
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      required
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the
+                      <a href="privacy-policy.html">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
             </div>
 
             <div class="ul-footer-widget">
               <h3 class="ul-footer-widget-title">Our Offices</h3>
 
               <div class="ul-footer-widget-links">
-                <a href="contact.html"
-                  >Edo State: No 2 Ogbeide Ihama Avenue, GRA, Benin City</a
-                >
-                <a href="contact.html"
-                  >Abuja: Behind Odogwu Palace Hotel, Wumba, Apo</a
-                >
-                <a href="contact.html"
-                  >Enugu State: No 87 Ogurugu Road, Nsukka</a
-                >
+                <a href="contact.html">
+                  <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                  Benin City
+                </a>
+                <a href="contact.html">
+                  <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+                </a>
+                <a href="contact.html">
+                  <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+                </a>
                 <a href="tel:+2349029940489">+234 902 994 0489</a>
               </div>
             </div>
@@ -567,5 +964,182 @@
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
     <script src="assets/js/form-handler.js"></script>
+
+    <!-- Filter functionality for news cards -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all filter buttons and news cards
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const newsCards = document.querySelectorAll(".news-card");
+
+        // Add click event to filter buttons
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Get the filter category
+            const filterCategory = this.textContent.toLowerCase();
+
+            // Show/hide cards based on filter
+            if (filterCategory === "all") {
+              newsCards.forEach((card) => {
+                card.style.display = "block";
+              });
+            } else {
+              newsCards.forEach((card) => {
+                // Get category from card (in this example, checking card title text)
+                const cardTitle = card
+                  .querySelector(".news-title")
+                  .textContent.toLowerCase();
+
+                if (cardTitle.includes(filterCategory)) {
+                  card.style.display = "block";
+                } else {
+                  card.style.display = "none";
+                }
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- Event countdown and smooth scroll functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll functionality for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            if (this.getAttribute("href") !== "#") {
+              e.preventDefault();
+
+              const targetId = this.getAttribute("href");
+              const targetElement = document.querySelector(targetId);
+
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 100,
+                  behavior: "smooth",
+                });
+              }
+            }
+          });
+        });
+
+        // Event countdown functionality
+        const countdownElements = document.querySelectorAll(".event-countdown");
+
+        countdownElements.forEach((countdown) => {
+          const targetDate = new Date(countdown.getAttribute("data-date"));
+
+          // Update countdown
+          function updateCountdown() {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+              countdown.textContent = "Today!";
+              return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            countdown.textContent = days <= 0 ? "Soon!" : `${days} days`;
+          }
+
+          // Initial update
+          updateCountdown();
+
+          // Update daily (no need for more frequent updates)
+          setInterval(updateCountdown, 86400000);
+        });
+      });
+    </script>
+
+    <!-- Newsletter subscription functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the newsletter form
+        const newsletterForm = document.querySelector(".newsletter-form");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get email input
+            const emailInput = this.querySelector(".newsletter-input");
+            const email = emailInput.value.trim();
+
+            // Simple validation
+            if (!email || !email.includes("@") || !email.includes(".")) {
+              alert("Please enter a valid email address");
+              return;
+            }
+
+            // Here you would normally send this to your backend
+            // For now, we'll just show a success message
+            const formParent = this.parentElement;
+
+            // Create success message
+            const successDiv = document.createElement("div");
+            successDiv.className = "alert alert-success mt-3";
+            successDiv.role = "alert";
+            successDiv.textContent =
+              "Thank you for subscribing to our newsletter!";
+
+            // Clear form and append success message
+            this.style.display = "none";
+            formParent.appendChild(successDiv);
+
+            // Reset form for future use
+            this.reset();
+
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+              successDiv.remove();
+              this.style.display = "flex";
+            }, 5000);
+          });
+        }
+      });
+    </script>
+
+    <!-- Share functionality for news articles -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all social share buttons
+        const shareButtons = document.querySelectorAll(".social-share a");
+
+        // Add click event to share buttons
+        shareButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const platform = this.querySelector("i").className;
+            const newsTitle =
+              this.closest(".news-card, .card").querySelector("h3").textContent;
+            const url = window.location.href;
+            let shareUrl = "";
+
+            // Determine which platform to share on
+            if (platform.includes("facebook")) {
+              shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${newsTitle}`;
+            } else if (platform.includes("twitter")) {
+              shareUrl = `https://twitter.com/intent/tweet?text=${newsTitle}&url=${url}`;
+            } else if (platform.includes("linkedin")) {
+              shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            }
+
+            // Open share dialog
+            if (shareUrl) {
+              window.open(shareUrl, "_blank", "width=600,height=400");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
