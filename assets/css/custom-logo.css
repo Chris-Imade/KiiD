@@ -1,0 +1,52 @@
+.custom-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.custom-logo.white {
+  color: white;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.custom-logo .logo-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  margin-left: 8px;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.custom-logo.white .logo-text {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-logo img {
+    height: 32px;
+  }
+
+  .custom-logo .logo-text {
+    font-size: 20px;
+  }
+}
+
+/* Hide search elements */
+.ul-search-form-wrapper,
+.ul-header-search-opener {
+  display: none !important;
+}

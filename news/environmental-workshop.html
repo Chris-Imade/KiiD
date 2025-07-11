@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Environmental Awareness Workshop - Kingscity Initiative for Integrated
+      Development (KiiD)
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/favicon.jpeg" type="image/jpeg" />
+
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="../assets/icon/flaticon_charitics.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/vendor/splide/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/vendor/slim-select/slimselect.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/animate-wow/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/flatpickr.min.css"
+    />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/custom-logo.css" />
+    <link rel="stylesheet" href="../assets/css/loading-indicator.css" />
+
+    <style>
+      .news-detail-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+      }
+
+      .news-date {
+        color: #ebbf10;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .social-share {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .social-share a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+
+      .social-share a:hover {
+        background-color: #ebbf10;
+        color: #fff;
+      }
+
+      .news-content {
+        line-height: 1.8;
+      }
+
+      .news-content p {
+        margin-bottom: 1.5rem;
+      }
+
+      .related-news {
+        margin-top: 3rem;
+        padding-top: 3rem;
+        border-top: 1px solid #eee;
+      }
+
+      .related-news-card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 2rem;
+        background-color: #fff;
+      }
+
+      .related-news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="../index.html" class="custom-logo">
+            <img
+              src="../assets/img/logo-icon.jpeg"
+              alt="KiiD logo"
+              style="width: 80px; height: 80px"
+            />
+            <span
+              class="logo-text"
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+                margin-left: -5px;
+                font-size: 32px;
+              "
+              >KiiD</span
+            >
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
+        </button>
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Contact Us</span>
+
+        <div class="ul-sidebar-footer-info">
+          <p>+234 902 994 0489</p>
+          <p>info@kiid.org</p>
+        </div>
+
+        <div class="ul-sidebar-footer-social">
+          <a
+            href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+            target="_blank"
+            ><i class="flaticon-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+            target="_blank"
+            ><i class="flaticon-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a
+              href="../index.html"
+              class="d-inline-block custom-logo"
+              style="margin-top: 10px"
+            >
+              <img
+                src="../assets/img/logo-icon.jpeg"
+                alt="KiiD logo"
+                style="width: 80px; height: 80px"
+              />
+              <span
+                class="logo-text"
+                style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                  margin-left: -5px;
+                  font-size: 32px;
+                  color: #ebbf10;
+                "
+                >KiiD</span
+              >
+            </a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../services.html">Our Programs</a>
+                <a href="../news.html" class="active">News & Events</a>
+
+                <div class="has-sub-menu">
+                  <a role="button">Get Involved</a>
+
+                  <div class="ul-header-submenu">
+                    <ul>
+                      <li><a href="../donations.html">Make a Donation</a></li>
+                      <li><a href="../contact.html">Volunteer</a></li>
+                      <li><a href="../contact.html">Partner With Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a href="../annual-reports.html">Annual Reports</a>
+                <a href="../contact.html">Contact</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <button class="ul-header-search-opener">
+              <i class="flaticon-search"></i>
+            </button>
+            <a href="../contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Get Involved
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">News Detail</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li><a href="../news.html">News & Events</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li>Environmental Awareness Workshop</li>
+          </ul>
+        </div>
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
+
+      <!-- NEWS DETAIL SECTION START -->
+      <section class="ul-section-spacing pt-0">
+        <div class="ul-container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <article class="news-detail">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="news-date">April 10, 2023</span>
+                  <div class="social-share">
+                    <a
+                      href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+                      target="_blank"
+                      ><i class="flaticon-twitter"></i
+                    ></a>
+                    <a
+                      href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+                      target="_blank"
+                      ><i class="flaticon-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+
+                <h1 class="mb-4">Environmental Awareness Workshop</h1>
+
+                <img
+                  src="../assets/img/donation-2.jpg"
+                  alt="Environmental Workshop"
+                  class="news-detail-image"
+                />
+
+                <div class="news-content">
+                  <p>
+                    KiiD organized an environmental awareness workshop targeting
+                    youth in Abuja. The workshop focused on practical ways to
+                    protect the environment, including waste management,
+                    recycling, and tree planting initiatives.
+                  </p>
+
+                  <p>
+                    Participants engaged in hands-on activities and discussions
+                    about climate change and its impact on local communities.
+                    Each participant pledged to plant at least five trees in
+                    their neighborhood.
+                  </p>
+
+                  <p>
+                    The two-day workshop, held at the community hall in Wumba,
+                    Abuja, brought together over 50 young people between the
+                    ages of 15 and 25. The program was designed to empower youth
+                    to become environmental advocates and to take practical
+                    steps towards protecting their local environment.
+                  </p>
+
+                  <p>
+                    The workshop covered several important topics, including:
+                  </p>
+
+                  <ul class="mb-4">
+                    <li>Understanding climate change and its local impacts</li>
+                    <li>Sustainable waste management practices</li>
+                    <li>Water conservation techniques</li>
+                    <li>Renewable energy solutions</li>
+                    <li>The importance of biodiversity</li>
+                    <li>Tree planting and care</li>
+                    <li>Creating environmental advocacy campaigns</li>
+                  </ul>
+
+                  <p>
+                    "Young people are the future stewards of our environment,"
+                    said our Environmental Program Coordinator. "By engaging
+                    them early and providing them with both knowledge and
+                    practical skills, we're investing in sustainable
+                    environmental protection for generations to come."
+                  </p>
+
+                  <p>
+                    A highlight of the workshop was the hands-on waste
+                    segregation and recycling session, where participants
+                    learned to identify different types of waste and appropriate
+                    recycling methods. They also created art pieces from
+                    recycled materials, demonstrating creative ways to reuse
+                    items that would otherwise end up in landfills.
+                  </p>
+
+                  <p>
+                    On the second day, participants worked in groups to develop
+                    environmental action plans for their communities. These
+                    plans included waste management initiatives, tree planting
+                    campaigns, and environmental education programs. Each
+                    participant received a starter kit containing tree
+                    seedlings, educational materials, and basic tools for
+                    implementing their action plans.
+                  </p>
+
+                  <p>
+                    "The most valuable aspect of this workshop is that it moves
+                    beyond awareness to action," noted one of the facilitators.
+                    "We're not just telling young people about environmental
+                    problems; we're equipping them with the tools and knowledge
+                    to be part of the solution."
+                  </p>
+
+                  <p>
+                    The workshop concluded with a tree planting ceremony at a
+                    nearby school, where participants planted 30 indigenous tree
+                    species. As part of their commitment to environmental
+                    stewardship, each participant signed a pledge to plant at
+                    least five additional trees in their communities and to
+                    advocate for sustainable environmental practices.
+                  </p>
+
+                  <p>
+                    This workshop is part of KiiD's larger environmental
+                    initiative aimed at promoting climate resilience and
+                    sustainable practices in communities across Nigeria. Stay
+                    tuned for updates on the impacts of these youth-led
+                    environmental initiatives.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Related News -->
+              <div class="related-news">
+                <h3 class="mb-4">Related News</h3>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card related-news-card">
+                      <img
+                        src="../assets/img/donation-1.jpg"
+                        alt="Medical Outreach"
+                        class="card-img-top"
+                        style="height: 200px; object-fit: cover"
+                      />
+                      <div class="card-body">
+                        <span class="news-date">May 20, 2023</span>
+                        <h5 class="card-title">
+                          Free Medical Outreach in Benin City
+                        </h5>
+                        <a href="medical-outreach.html" class="ul-btn-sm mt-2"
+                          >Read More</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card related-news-card">
+                      <img
+                        src="../assets/img/donation-3.jpg"
+                        alt="Skills Graduation"
+                        class="card-img-top"
+                        style="height: 200px; object-fit: cover"
+                      />
+                      <div class="card-body">
+                        <span class="news-date">March 5, 2023</span>
+                        <h5 class="card-title">
+                          Skills Acquisition Program Graduation
+                        </h5>
+                        <a href="skills-graduation.html" class="ul-btn-sm mt-2"
+                          >Read More</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- NEWS DETAIL SECTION END -->
+
+      <!-- CTA SECTION START -->
+      <section class="ul-cta">
+        <div class="ul-container">
+          <span class="ul-section-sub-title">Join Us in Creating Change</span>
+          <h2 class="ul-cta-title">
+            Support Our Work for Sustainable Community Development
+          </h2>
+          <a href="../donations.html" class="ul-btn"
+            ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Make a Donation</a
+          >
+        </div>
+        <img
+          src="../assets/img/cta-vector.svg"
+          alt="Vector"
+          class="ul-cta-vector"
+        />
+      </section>
+      <!-- CTA SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@kiid.org">info@kiid.org</a>
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Contact Us</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:+2349029940489">+234 902 994 0489</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="../index.html" class="custom-logo white">
+                <img
+                  src="../assets/img/logo-icon.jpeg"
+                  alt="KiiD logo"
+                  style="width: 80px; height: 80px"
+                />
+                <span
+                  class="logo-text"
+                  style="
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                      'Trebuchet MS', sans-serif;
+                    margin-left: -5px;
+                    font-size: 32px;
+                    color: #fff;
+                  "
+                  >KiiD</span
+                >
+              </a>
+              <p class="ul-footer-about-txt">
+                Kingscity Initiative for Integrated Development (KiiD) is
+                dedicated to building thriving communities through healthcare
+                access, environmental sustainability, and socio-economic
+                empowerment.
+              </p>
+              <div class="ul-footer-socials">
+                <a
+                  href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
+                  target="_blank"
+                  ><i class="flaticon-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
+                  target="_blank"
+                  ><i class="flaticon-instagram"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="../about.html">About Us</a>
+                <a href="../services.html">Our Programs</a>
+                <a href="../news.html">News & Events</a>
+                <a href="../contact.html">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Our Impact</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="../about.html#our-impact"
+                  >Over 1,000 people reached through health outreach</a
+                >
+                <a href="../about.html#our-impact"
+                  >3,000+ youth educated on climate action</a
+                >
+                <a href="../about.html#our-impact"
+                  >150+ individuals trained in market-relevant skills</a
+                >
+                <a href="../about.html#our-impact"
+                  >5,000+ trees planted for environmental restoration</a
+                >
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Our Offices</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="../contact.html">
+                  <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                  Benin City
+                </a>
+                <a href="../contact.html">
+                  <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+                </a>
+                <a href="../contact.html">
+                  <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+                </a>
+                <a href="tel:+2349029940489">+234 902 994 0489</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> Kingscity
+              Initiative for Integrated Development. All rights reserved
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="../terms-and-conditions.html">Terms & Conditions</a>
+              <a href="../privacy-policy.html">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="../assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
+      </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/splide/splide.min.js"></script>
+    <script src="../assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="../assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="../assets/vendor/splittype/index.min.js"></script>
+    <script src="../assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="../assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="../assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/tab.js"></script>
+    <script src="../assets/js/accordion.js"></script>
+    <script src="../assets/js/progressbar.js"></script>
+    <script src="../assets/js/form-handler.js"></script>
+
+    <!-- Share functionality for news articles -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all social share buttons
+        const shareButtons = document.querySelectorAll(".social-share a");
+
+        // Add click event to share buttons
+        shareButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const platform = this.querySelector("i").className;
+            const newsTitle = document.querySelector("h1").textContent;
+            const url = window.location.href;
+            let shareUrl = "";
+
+            // Determine which platform to share on
+            if (platform.includes("twitter")) {
+              shareUrl = `https://twitter.com/intent/tweet?text=${newsTitle}&url=${url}`;
+              window.open(shareUrl, "_blank", "width=600,height=400");
+            } else if (platform.includes("instagram")) {
+              // Instagram doesn't have a direct sharing URL API like Twitter
+              alert("Please copy this link to share on Instagram: " + url);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
