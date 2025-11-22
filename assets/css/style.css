@@ -170,6 +170,7 @@ button {
   padding-left: calc(var(--container-space-x) / 2);
   padding-right: calc(var(--container-space-x) / 2);
   margin: auto;
+  padding-top: 50px;
 }
 
 .ul-inner-container {
