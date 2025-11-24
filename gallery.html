@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Gallery - Kingscity Initiative for Integrated Development (KiiD)
+  </title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
+
+  <!-- libraries CSS -->
+  <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+  <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+  <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom-logo.css" />
+  <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+      transition: all .3s ease;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+      display: block
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .15)
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1)
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent);
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform .3s ease
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+      transform: translateY(0)
+    }
+
+    .gallery-item-title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0
+    }
+
+    .program-section {
+      margin-bottom: 50px
+    }
+
+    .program-section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #eb5310;
+      display: inline-block
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- SIDEBAR SECTION START -->
+  <div class="ul-sidebar">
+    <!-- header -->
+    <div class="ul-sidebar-header">
+      <div class="ul-sidebar-header-logo">
+        <a href="index.html" class="custom-logo">
+          <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+          <span class="logo-text" style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+                margin-left: -5px;
+                font-size: 32px;
+              ">KiiD</span>
+        </a>
+      </div>
+      <!-- sidebar closer -->
+      <button class="ul-sidebar-closer">
+        <i class="flaticon-close"></i>
+      </button>
+    </div>
+
+    <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+    <!-- sidebar footer -->
+    <div class="ul-sidebar-footer">
+      <span class="ul-sidebar-footer-title">Contact Us</span>
+
+      <div class="ul-sidebar-footer-info">
+        <p>+234 902 994 0489</p>
+        <p>kingscity.dev@gmail.com</p>
+      </div>
+
+      <div class="ul-sidebar-footer-social">
+        <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+            class="flaticon-twitter"></i></a>
+        <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+            class="flaticon-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- SIDEBAR SECTION END -->
+
+  <!-- SEARCH MODAL SECTION START -->
+  <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+    <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+    <form class="ul-search-form">
+      <div class="ul-search-form-right">
+        <input type="search" name="search" id="ul-search" placeholder="Search Here" />
+        <button type="submit">
+          <span class="icon"><i class="flaticon-search"></i></span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- SEARCH MODAL SECTION END -->
+
+  <!-- HEADER SECTION START -->
+  <header class="ul-header">
+    <div class="ul-header-bottom to-be-sticky">
+      <div class="ul-header-bottom-wrapper ul-header-container">
+        <div class="logo-container">
+          <a href="index.html" class="d-inline-block custom-logo" style="margin-top: 10px">
+            <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+            <span class="logo-text" style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                  margin-left: -5px;
+                  font-size: 32px;
+                  color: #ebbf10;
+                ">KiiD</span>
+          </a>
+        </div>
+
+        <!-- header nav -->
+        <div class="ul-header-nav-wrapper">
+          <div class="to-go-to-sidebar-in-mobile">
+            <nav class="ul-header-nav">
+              <a href="index.html">Home</a>
+
+              <div class="has-sub-menu">
+                <a role="button">About Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+                    <li><a href="about.html#approach">Our Approach</a></li>
+                    <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Programs Overview</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
+                    <li><a href="services.html#environment">Environmental & Climate Action</a></li>
+                    <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
+                    <li><a href="services.html#protection">Protection & MHPSS</a></li>
+                    <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
+                    <li><a href="services.html#research">Research & Evaluation</a></li>
+                    <li><a href="services.html#education">Education & Learning Support</a></li>
+                    <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
+                    <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
+                    <li><a href="services.html#community">Community Development</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="krat.html">KRAT</a>
+
+              <div class="has-sub-menu">
+                <a role="button">Partner With Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="donations.html">Volunteer</a></li>
+                    <li><a href="donations.html">Donate</a></li>
+                    <li><a href="donations.html">Careers & Internships</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Resources</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="news.html">Stories & Publications</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- actions -->
+        <div class="ul-header-actions">
+          <button class="ul-header-search-opener">
+            <i class="flaticon-search"></i>
+          </button>
+          <a href="contact.html" class="ul-btn d-sm-inline-flex d-none">
+            <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Get Involved
+          </a>
+          <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+            <i class="flaticon-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER SECTION END -->
+
+  <main>
+    <!-- BREADCRUMBS SECTION START -->
+    <section class="ul-breadcrumb ul-section-spacing">
+      <div class="ul-container">
+        <h2 class="ul-breadcrumb-title">Gallery</h2>
+        <ul class="ul-breadcrumb-nav">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <span class="separator"><i class="flaticon-right"></i></span>
+          </li>
+          <li>Gallery</li>
+        </ul>
+      </div>
+    </section>
+    <!-- BREADCRUMBS SECTION END -->
+
+    <!-- GALLERY INTRO START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container">
+        <div class="text-center mb-5">
+          <span class="ul-section-sub-title" style="color: #eb5310;">Our Work in Pictures</span>
+          <h2 class="ul-section-title">Where Pictures Speak</h2>
+          <p class="lead" style="color: #666; max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            Explore the visual journey of our programs and initiatives across Nigeria. Each image tells a story of
+            impact, transformation, and hope in the communities we serve.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- GALLERY INTRO END -->
+
+    <!-- HEALTH ADVOCACY GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Health Advocacy & Outreach</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/5353cb93b2934da290a21ca8f1062c72.jpg"
+            data-fslightbox="health-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/5353cb93b2934da290a21ca8f1062c72.jpg"
+              alt="Health Advocacy" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Health Advocacy & Outreach</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/ea453f2797b04f4f8bfd5e431a4193b9.jpg"
+            data-fslightbox="health-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/ea453f2797b04f4f8bfd5e431a4193b9.jpg"
+              alt="Health Advocacy" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Health Advocacy & Outreach</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 11.18.34 PM (1).jpeg"
+            data-fslightbox="health-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 11.18.34 PM (1).jpeg"
+              alt="Health Advocacy" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Health Advocacy & Outreach</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 11.18.34 PM.jpeg"
+            data-fslightbox="health-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 11.18.34 PM.jpeg"
+              alt="Health Advocacy" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Health Advocacy & Outreach</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 5.15.48 PM.jpeg"
+            data-fslightbox="health-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 5.15.48 PM.jpeg"
+              alt="Health Advocacy" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Health Advocacy & Outreach</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- HEALTH ADVOCACY GALLERY END -->
+
+    <!-- ENVIRONMENTAL PROTECTION GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Environmental Protection & Climate Action</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/256a9bfa8b8f41dc80146d3e38c7a6f2.jpg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/256a9bfa8b8f41dc80146d3e38c7a6f2.jpg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/53e67a23795e419399dbb0eefa9326c8.jpg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/53e67a23795e419399dbb0eefa9326c8.jpg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/757a8f1bec6e4db0b67cb1b5f2655301.jpg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/757a8f1bec6e4db0b67cb1b5f2655301.jpg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/7f1c2b0a64e34839b983cd2f72a1460e.jpg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/7f1c2b0a64e34839b983cd2f72a1460e.jpg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/c19fe4763d6545498aa04732629dd07d.jpg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/c19fe4763d6545498aa04732629dd07d.jpg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/WhatsApp Image 2025-11-17 at 6.07.48 PM.jpeg"
+            data-fslightbox="environment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/WhatsApp Image 2025-11-17 at 6.07.48 PM.jpeg"
+              alt="Environmental Protection" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Environmental Protection & Climate Action</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ENVIRONMENTAL PROTECTION GALLERY END -->
+
+    <!-- SOCIO-ECONOMIC EMPOWERMENT GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Socio-Economic Empowerment</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/61fff868c1494b3d820be518d5fb3ec1.jpg"
+            data-fslightbox="empowerment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/61fff868c1494b3d820be518d5fb3ec1.jpg"
+              alt="Socio-Economic Empowerment" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Socio-Economic Empowerment</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/WhatsApp Image 2025-11-17 at 7.25.29 PM.jpeg"
+            data-fslightbox="empowerment-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/WhatsApp Image 2025-11-17 at 7.25.29 PM.jpeg"
+              alt="Socio-Economic Empowerment" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Socio-Economic Empowerment</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- SOCIO-ECONOMIC EMPOWERMENT GALLERY END -->
+
+    <!-- PROTECTION & MHPSS GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Protection & Mental Health and Psychosocial Support (MHPSS)</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/388205aa8fb64962b692edf736d90764.jpg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/388205aa8fb64962b692edf736d90764.jpg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/7192d68d3350488d8ec0b5d1344005ca.jpg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/7192d68d3350488d8ec0b5d1344005ca.jpg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/89b10c6054ec4b5691d88a014919f6bd.jpg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/89b10c6054ec4b5691d88a014919f6bd.jpg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/8da7d5831dd6479c8b3d7cee1a698a0e.jpg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/8da7d5831dd6479c8b3d7cee1a698a0e.jpg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/WhatsApp Image 2025-10-10 at 10.41.39_93852290.jpg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/WhatsApp Image 2025-10-10 at 10.41.39_93852290.jpg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/WhatsApp Image 2025-11-17 at 8.33.10 PM.jpeg"
+            data-fslightbox="protection-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/4. Protection & Mental Health and Psychosocial Support (MHPSS)/WhatsApp Image 2025-11-17 at 8.33.10 PM.jpeg"
+              alt="Protection & MHPSS" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Protection & MHPSS</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- PROTECTION & MHPSS GALLERY END -->
+
+    <!-- CAPACITY BUILDING GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Capacity Building & Consulting</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 10.23.25 PM.jpeg"
+            data-fslightbox="capacity-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 10.23.25 PM.jpeg"
+              alt="Capacity Building" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Capacity Building & Consulting</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 10.23.27 PM.jpeg"
+            data-fslightbox="capacity-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 10.23.27 PM.jpeg"
+              alt="Capacity Building" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Capacity Building & Consulting</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 8.04.13 PM.jpeg"
+            data-fslightbox="capacity-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 8.04.13 PM.jpeg"
+              alt="Capacity Building" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Capacity Building & Consulting</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 8.12.25 PM.jpeg"
+            data-fslightbox="capacity-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 8.12.25 PM.jpeg"
+              alt="Capacity Building" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Capacity Building & Consulting</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 9.57.50 PM.jpeg"
+            data-fslightbox="capacity-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/5. Capacity Building & Consulting/WhatsApp Image 2025-11-17 at 9.57.50 PM.jpeg"
+              alt="Capacity Building" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Capacity Building & Consulting</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- CAPACITY BUILDING GALLERY END -->
+
+    <!-- RESEARCH & EVALUATION GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Research & Evaluation</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (1).jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (1).jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (2).jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (2).jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (3).jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 10.23.26 PM (3).jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.49 PM.jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.49 PM.jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.51 PM.jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.51 PM.jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.52 PM.jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.52 PM.jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.53 PM.jpeg"
+            data-fslightbox="research-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.53 PM.jpeg"
+              alt="Research & Evaluation" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Research & Evaluation</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- RESEARCH & EVALUATION GALLERY END -->
+
+    <!-- EDUCATION & LEARNING GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Education & Learning Support</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/7. Education & Learning Support/WhatsApp Image 2025-10-02 at 13.06.37_27f6e6fe.jpg"
+            data-fslightbox="education-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/7. Education & Learning Support/WhatsApp Image 2025-10-02 at 13.06.37_27f6e6fe.jpg"
+              alt="Education & Learning" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Education & Learning Support</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/7. Education & Learning Support/WhatsApp Image 2025-10-02 at 13.36.50_ca320c60.jpg"
+            data-fslightbox="education-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/7. Education & Learning Support/WhatsApp Image 2025-10-02 at 13.36.50_ca320c60.jpg"
+              alt="Education & Learning" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Education & Learning Support</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- EDUCATION & LEARNING GALLERY END -->
+
+    <!-- AGRICULTURE & FOOD SECURITY GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Agriculture & Food Security</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/471e699829994b4c8f95cd08c0869af7.jpg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/471e699829994b4c8f95cd08c0869af7.jpg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/aeae369bdd6846b0bd6b2142a91d7497.jpg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/aeae369bdd6846b0bd6b2142a91d7497.jpg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/dd058ef1ce3c4dc3a7930863a70f8678.jpg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/dd058ef1ce3c4dc3a7930863a70f8678.jpg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/ebc997cb430e410d8c97d8d1af0dc1b5.jpg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/ebc997cb430e410d8c97d8d1af0dc1b5.jpg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 11.24.59 PM.jpeg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 11.24.59 PM.jpeg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 11.28.30 PM.jpeg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 11.28.30 PM.jpeg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 9.10.45 PM.jpeg"
+            data-fslightbox="agriculture-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/8. Agriculture & Food Security/WhatsApp Image 2025-11-17 at 9.10.45 PM.jpeg"
+              alt="Agriculture & Food Security" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Agriculture & Food Security</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- AGRICULTURE & FOOD SECURITY GALLERY END -->
+
+    <!-- PEACE & CONFLICT RESOLUTION GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Peace & Conflict Resolution</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/9. Peace & Conflict Resolution/b25740d8a3ba49b5823822f1a3f27ffb.jpg"
+            data-fslightbox="peace-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/9. Peace & Conflict Resolution/b25740d8a3ba49b5823822f1a3f27ffb.jpg"
+              alt="Peace & Conflict Resolution" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Peace & Conflict Resolution</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/9. Peace & Conflict Resolution/WhatsApp Image 2025-11-17 at 10.23.25 PM (1).jpeg"
+            data-fslightbox="peace-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/9. Peace & Conflict Resolution/WhatsApp Image 2025-11-17 at 10.23.25 PM (1).jpeg"
+              alt="Peace & Conflict Resolution" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Peace & Conflict Resolution</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- PEACE & CONFLICT RESOLUTION GALLERY END -->
+
+    <!-- COMMUNITY DEVELOPMENT GALLERY START -->
+    <section class="ul-section-spacing pt-0 program-section">
+      <div class="ul-container">
+        <h3 class="program-section-title">Community Development</h3>
+        <div class="gallery-grid">
+          <a href="assets/img/pictures-for-10-programs/10. Community Development/03fc6dddb26140beb8be38a3f18d1918.jpg"
+            data-fslightbox="community-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/10. Community Development/03fc6dddb26140beb8be38a3f18d1918.jpg"
+              alt="Community Development" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Community Development</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/10. Community Development/049a8b4ef3e4486680313b54560a1afb.jpg"
+            data-fslightbox="community-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/10. Community Development/049a8b4ef3e4486680313b54560a1afb.jpg"
+              alt="Community Development" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Community Development</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/10. Community Development/658ae59411f646e3a7204e7992346cb7.jpg"
+            data-fslightbox="community-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/10. Community Development/658ae59411f646e3a7204e7992346cb7.jpg"
+              alt="Community Development" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Community Development</p>
+            </div>
+          </a>
+          <a href="assets/img/pictures-for-10-programs/10. Community Development/WhatsApp Image 2025-11-17 at 10.23.26 PM.jpeg"
+            data-fslightbox="community-gallery" class="gallery-item">
+            <img
+              src="assets/img/pictures-for-10-programs/10. Community Development/WhatsApp Image 2025-11-17 at 10.23.26 PM.jpeg"
+              alt="Community Development" loading="lazy">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-title">Community Development</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- COMMUNITY DEVELOPMENT GALLERY END -->
+  </main>
+
+  <!-- FOOTER SECTION START -->
+  <footer class="ul-footer">
+    <div class="ul-footer-top">
+      <div class="ul-footer-container">
+        <div class="ul-footer-top-contact-infos">
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-pin"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Address</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-email"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Send Email</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="mailto:kingscity.dev@gmail.com ">kingscity.dev@gmail.com
+                </a>
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-telephone-call-1"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Contact Us</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="tel:+2349029940489">+234 902 994 0489</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-footer-middle">
+      <div class="ul-footer-container">
+        <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+          <div class="ul-footer-about">
+            <a href="index.html" class="custom-logo white">
+              <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+              <span class="logo-text" style="
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                      'Trebuchet MS', sans-serif;
+                    margin-left: -5px;
+                    font-size: 32px;
+                    color: #fff;
+                  ">KiiD</span>
+            </a>
+            <p class="ul-footer-about-txt">
+              Kingscity Initiative for Integrated Development (KiiD) is
+              dedicated to building thriving communities through healthcare
+              access, environmental sustainability, and socio-economic
+              empowerment.
+            </p>
+            <div class="ul-footer-socials">
+              <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                  class="flaticon-twitter"></i></a>
+              <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                  class="flaticon-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Our Programs</a>
+              <a href="news.html">News & Events</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Impact</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html#our-impact">Over 1,000 people reached through health outreach</a>
+              <a href="about.html#our-impact">3,000+ youth educated on climate action</a>
+              <a href="about.html#our-impact">150+ individuals trained in market-relevant skills</a>
+              <a href="about.html#our-impact">5,000+ trees planted for environmental restoration</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget ul-nwsltr-widget">
+            <h3 class="ul-footer-widget-title">Get Involved</h3>
+            <div class="ul-footer-widget-links ul-footer-contact-links">
+              <a href="mailto:kingscity.dev@gmail.com "><i class="flaticon-mail"></i> kingscity.dev@gmail.com
+              </a>
+              <a href="tel:+2349029940489"><i class="flaticon-telephone-call"></i> +234 902 994 0489</a>
+            </div>
+            <form class="ul-nwsltr-form">
+              <div class="top">
+                <input type="email" name="email" id="nwsltr-email" placeholder="Your Email Address"
+                  class="ul-nwsltr-input" required />
+                <button type="submit">
+                  <i class="flaticon-next"></i>
+                </button>
+              </div>
+
+              <div class="agreement">
+                <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                  <input type="checkbox" name="agreement" id="nwsltr-agreement" required />
+                  <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
+                  <span class="ul-checkbox-txt">I agree with the
+                    <a href="privacy-policy.html">Privacy Policy</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Offices</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="contact.html">
+                <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                Benin City
+              </a>
+              <a href="contact.html">
+                <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+              </a>
+              <a href="contact.html">
+                <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+              </a>
+              <a href="tel:+2349029940489">+234 902 994 0489</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer bottom -->
+    <div class="ul-footer-bottom">
+      <div class="ul-footer-container">
+        <div class="ul-footer-bottom-wrapper">
+          <p class="copyright-txt">
+            &copy;
+            <span id="footer-copyright-year"></span> Kingscity Initiative for
+            Integrated Development. All rights reserved
+          </p>
+          <div class="ul-footer-bottom-nav">
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vector -->
+    <div class="ul-footer-vectors">
+      <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1" />
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
+
+  <!-- libraries JS -->
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/splide/splide.min.js"></script>
+  <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+  <script src="assets/vendor/animate-wow/wow.min.js"></script>
+  <script src="assets/vendor/splittype/index.min.js"></script>
+  <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+  <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+  <!-- custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/form-handler.js"></script>
+</body>
+
+</html>
