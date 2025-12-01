@@ -1,1199 +1,1073 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      News & Events - Kingscity Initiative for Integrated Development (KiiD)
-    </title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    News & Events - Kingscity Initiative for Integrated Development (KiiD)
+  </title>
 
-    <!-- libraries CSS -->
-    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
-    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
-    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
 
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom-logo.css" />
-    <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+  <!-- libraries CSS -->
+  <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+  <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+  <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-    <style>
-      /* Custom styles for the news page */
-      .news-card {
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 2rem;
-        background-color: #fff;
-      }
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom-logo.css" />
+  <link rel="stylesheet" href="assets/css/loading-indicator.css" />
 
-      .news-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
+  <style>
+    /* Custom styles for the news page */
+    .news-card {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+      background-color: #fff;
+    }
 
-      .news-image {
-        height: 250px;
-        object-fit: cover;
-        width: 100%;
-      }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
 
-      .news-date {
-        color: #ebbf10;
-        font-weight: 500;
-        display: inline-block;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-      }
+    .news-image {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
 
-      .news-title {
-        color: #333;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
+    .news-date {
+      color: #ebbf10;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
 
-      .news-content {
-        color: #666;
-        line-height: 1.7;
-      }
+    .news-title {
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
 
-      .news-cta {
-        background-color: #f7f9fc;
-        padding: 3rem 0;
-        border-radius: 10px;
-        margin-bottom: 3rem;
-      }
+    .news-content {
+      color: #666;
+      line-height: 1.7;
+    }
 
-      .news-filter {
-        margin-bottom: 2rem;
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .news-cta {
+      background-color: #f7f9fc;
+      padding: 3rem 0;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+    }
 
-      .filter-btn {
-        padding: 8px 20px;
-        border: 1px solid #ebbf10;
-        border-radius: 30px;
-        background: transparent;
-        color: #333;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
+    .news-filter {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-      .filter-btn.active,
-      .filter-btn:hover {
-        background-color: #ebbf10;
-        color: #fff;
-      }
+    .filter-btn {
+      padding: 8px 20px;
+      border: 1px solid #ebbf10;
+      border-radius: 30px;
+      background: transparent;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-      .featured-news {
-        position: relative;
-        border-radius: 15px;
-        overflow: hidden;
-        margin-bottom: 3rem;
-      }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: #ebbf10;
+      color: #fff;
+    }
 
-      .featured-news-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-        color: #fff;
-      }
+    .featured-news {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
 
-      .featured-news img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-      }
+    .featured-news-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      color: #fff;
+    }
 
-      .featured-news-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: #fff;
-      }
+    .featured-news img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
 
-      .featured-news-date {
-        color: #ebbf10;
-        font-weight: 500;
-      }
+    .featured-news-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
 
-      .job-card {
-        background-color: #f7f9fc;
-        border-radius: 10px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        border-left: 5px solid #ebbf10;
-      }
+    .featured-news-date {
+      color: #ebbf10;
+      font-weight: 500;
+    }
 
-      .newsletter-section {
-        background-color: #ebbf10;
-        padding: 3rem 2rem;
-        border-radius: 10px;
-        color: #fff;
-        margin-bottom: 3rem;
-      }
+    .job-card {
+      background-color: #f7f9fc;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-left: 5px solid #ebbf10;
+    }
 
-      .newsletter-form {
-        display: flex;
-        margin-top: 1.5rem;
-      }
+    .newsletter-section {
+      background-color: #ebbf10;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      color: #fff;
+      margin-bottom: 3rem;
+    }
 
-      .newsletter-input {
-        flex: 1;
-        padding: 0.75rem 1rem;
-        border: none;
-        border-radius: 5px 0 0 5px;
-        background-color: #8080806e;
-      }
+    .newsletter-form {
+      display: flex;
+      margin-top: 1.5rem;
+    }
 
-      .newsletter-btn {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 0 1.5rem;
-        border-radius: 0 5px 5px 0;
-        font-weight: 500;
-      }
+    .newsletter-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      background-color: #8080806e;
+    }
 
-      .social-share {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
+    .newsletter-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: 0 5px 5px 0;
+      font-weight: 500;
+    }
 
-      .social-share a {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background-color: #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #333;
-        transition: all 0.3s ease;
-      }
+    .social-share {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
 
-      .social-share a:hover {
-        background-color: #ebbf10;
-        color: #fff;
-      }
+    .social-share a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      transition: all 0.3s ease;
+    }
 
-      .upcoming-events {
-        margin-top: 3rem;
-      }
+    .social-share a:hover {
+      background-color: #ebbf10;
+      color: #fff;
+    }
 
-      .event-card {
-        display: flex;
-        margin-bottom: 1.5rem;
-        background-color: #f7f9fc;
-        border-radius: 10px;
-        overflow: hidden;
-      }
+    .upcoming-events {
+      margin-top: 3rem;
+    }
 
-      .event-date {
-        min-width: 80px;
-        background-color: #ebbf10;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem 0;
-      }
+    .event-card {
+      display: flex;
+      margin-bottom: 1.5rem;
+      background-color: #f7f9fc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-      .event-day {
-        font-size: 1.8rem;
-        font-weight: 700;
-      }
+    .event-date {
+      min-width: 80px;
+      background-color: #ebbf10;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 0;
+    }
 
-      .event-month {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-      }
+    .event-day {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
 
-      .event-countdown {
-        font-size: 0.8rem;
-        background-color: #333;
-        color: #fff;
-        padding: 2px 5px;
-        border-radius: 3px;
-        margin-top: 5px;
-        text-align: center;
-      }
+    .event-month {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
 
-      .event-details {
-        padding: 1rem 1.5rem;
-      }
+    .event-countdown {
+      font-size: 0.8rem;
+      background-color: #333;
+      color: #fff;
+      padding: 2px 5px;
+      border-radius: 3px;
+      margin-top: 5px;
+      text-align: center;
+    }
 
-      .event-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
+    .event-details {
+      padding: 1rem 1.5rem;
+    }
 
-      .event-location {
-        color: #666;
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-    </style>
-  </head>
+    .event-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
 
-  <body>
-    <div class="preloader" id="preloader">
-      <div class="loader"></div>
-    </div>
+    .event-location {
+      color: #666;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
 
-    <!-- SIDEBAR SECTION START -->
-    <div class="ul-sidebar">
-      <!-- header -->
-      <div class="ul-sidebar-header">
-        <div class="ul-sidebar-header-logo">
-          <a href="index.html" class="custom-logo">
-            <img
-              src="assets/img/logo-icon.jpeg"
-              alt="KiiD logo"
-              style="width: 80px; height: 80px"
-            />
-            <span
-              class="logo-text"
-              style="
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- SIDEBAR SECTION START -->
+  <div class="ul-sidebar">
+    <!-- header -->
+    <div class="ul-sidebar-header">
+      <div class="ul-sidebar-header-logo">
+        <a href="index.html" class="custom-logo">
+          <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+          <span class="logo-text" style="
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                   'Trebuchet MS', sans-serif;
                 margin-left: -5px;
                 font-size: 32px;
-              "
-              >KiiD</span
-            >
-          </a>
-        </div>
-        <!-- sidebar closer -->
-        <button class="ul-sidebar-closer">
-          <i class="flaticon-close"></i>
+              ">KiiD</span>
+        </a>
+      </div>
+      <!-- sidebar closer -->
+      <button class="ul-sidebar-closer">
+        <i class="flaticon-close"></i>
+      </button>
+    </div>
+
+    <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+    <!-- sidebar footer -->
+    <div class="ul-sidebar-footer">
+      <span class="ul-sidebar-footer-title">Contact Us</span>
+
+      <div class="ul-sidebar-footer-info">
+        <p>+234 902 994 0489</p>
+        <p>kingscity.dev@gmail.com</p>
+      </div>
+
+      <div class="ul-sidebar-footer-social">
+        <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+            class="flaticon-twitter"></i></a>
+        <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+            class="flaticon-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- SIDEBAR SECTION END -->
+
+  <!-- SEARCH MODAL SECTION START -->
+  <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+    <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+    <form class="ul-search-form">
+      <div class="ul-search-form-right">
+        <input type="search" name="search" id="ul-search" placeholder="Search Here" />
+        <button type="submit">
+          <span class="icon"><i class="flaticon-search"></i></span>
         </button>
       </div>
+    </form>
+  </div>
+  <!-- SEARCH MODAL SECTION END -->
 
-      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
-
-      <!-- sidebar footer -->
-      <div class="ul-sidebar-footer">
-        <span class="ul-sidebar-footer-title">Contact Us</span>
-
-        <div class="ul-sidebar-footer-info">
-          <p>+234 902 994 0489</p>
-          <p>kingscity.dev@gmail.com</p>
-        </div>
-
-        <div class="ul-sidebar-footer-social">
-          <a
-            href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-            target="_blank"
-            ><i class="flaticon-twitter"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-            target="_blank"
-            ><i class="flaticon-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-    <!-- SIDEBAR SECTION END -->
-
-    <!-- SEARCH MODAL SECTION START -->
-    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
-      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
-
-      <form class="ul-search-form">
-        <div class="ul-search-form-right">
-          <input
-            type="search"
-            name="search"
-            id="ul-search"
-            placeholder="Search Here"
-          />
-          <button type="submit">
-            <span class="icon"><i class="flaticon-search"></i></span>
-          </button>
-        </div>
-      </form>
-    </div>
-    <!-- SEARCH MODAL SECTION END -->
-
-    <!-- HEADER SECTION START -->
-    <header class="ul-header">
-      <div class="ul-header-bottom to-be-sticky">
-        <div class="ul-header-bottom-wrapper ul-header-container">
-          <div class="logo-container">
-            <a
-              href="index.html"
-              class="d-inline-block custom-logo"
-              style="margin-top: 10px"
-            >
-              <img
-                src="assets/img/logo-icon.jpeg"
-                alt="KiiD logo"
-                style="width: 80px; height: 80px"
-              />
-              <span
-                class="logo-text"
-                style="
+  <!-- HEADER SECTION START -->
+  <header class="ul-header">
+    <div class="ul-header-bottom to-be-sticky">
+      <div class="ul-header-bottom-wrapper ul-header-container">
+        <div class="logo-container">
+          <a href="index.html" class="d-inline-block custom-logo" style="margin-top: 10px">
+            <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+            <span class="logo-text" style="
                   font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                     'Trebuchet MS', sans-serif;
                   margin-left: -5px;
                   font-size: 32px;
                   color: #ebbf10;
-                "
-                >KiiD</span
-              >
-            </a>
+                ">KiiD</span>
+          </a>
+        </div>
+
+        <!-- header nav -->
+        <div class="ul-header-nav-wrapper">
+          <div class="to-go-to-sidebar-in-mobile">
+            <nav class="ul-header-nav">
+              <a href="index.html">Home</a>
+
+              <div class="has-sub-menu">
+                <a role="button">About Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+                    <li><a href="about.html#approach">Our Approach</a></li>
+                    <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Our Programs</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
+                    <li><a href="services.html#environment">Environmental & Climate Action</a></li>
+                    <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
+                    <li><a href="services.html#protection">Protection & MHPSS</a></li>
+                    <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
+                    <li><a href="services.html#research">Research & Evaluation</a></li>
+                    <li><a href="services.html#education">Education & Learning Support</a></li>
+                    <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
+                    <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
+                    <li><a href="services.html#community">Community Development</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="krat.html">KRAT</a>
+
+              <div class="has-sub-menu">
+                <a role="button">Partner With Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="donations.html">Volunteer</a></li>
+                    <li><a href="donations.html">Donate</a></li>
+                    <li><a href="donations.html">Careers & Internships</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Resources</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="news.html">Stories & Publications</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="contact.html">Contact</a>
+            </nav>
           </div>
+        </div>
 
-          <!-- header nav -->
-          <div class="ul-header-nav-wrapper">
-            <div class="to-go-to-sidebar-in-mobile">
-              <nav class="ul-header-nav">
-                <a href="index.html">Home</a>
-                
-                <div class="has-sub-menu">
-                  <a role="button">About Us</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="about.html">Who We Are</a></li>
-                      <li><a href="about.html#mission-vision">Mission & Vision</a></li>
-                      <li><a href="about.html#approach">Our Approach</a></li>
-                      <li><a href="about.html#values">Our Values</a></li>
-                      <li><a href="about.html#team">Our Team</a></li>
-                    </ul>
-                  </div>
-                </div>
+        <!-- actions -->
+        <div class="ul-header-actions">
+          <button class="ul-header-search-opener">
+            <i class="flaticon-search"></i>
+          </button>
+          <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"><i
+              class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Get Involved
+          </a>
+          <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+            <i class="flaticon-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER SECTION END -->
 
-                <div class="has-sub-menu">
-                  <a role="button">Our Program</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
-                      <li><a href="services.html#environment">Environmental & Climate Action</a></li>
-                      <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
-                      <li><a href="services.html#protection">Protection & MHPSS</a></li>
-                      <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
-                      <li><a href="services.html#research">Research & Evaluation</a></li>
-                      <li><a href="services.html#education">Education & Learning Support</a></li>
-                      <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
-                      <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
-                      <li><a href="services.html#community">Community Development</a></li>
-                    </ul>
-                  </div>
-                </div>
+  <main>
+    <!-- BREADCRUMBS SECTION START -->
+    <section class="ul-breadcrumb ul-section-spacing">
+      <div class="ul-container">
+        <h2 class="ul-breadcrumb-title">News & Events</h2>
+        <ul class="ul-breadcrumb-nav">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <span class="separator"><i class="flaticon-right"></i></span>
+          </li>
+          <li>News & Events</li>
+        </ul>
+      </div>
+    </section>
+    <!-- BREADCRUMBS SECTION END -->
 
-                <a href="krat.html">KRAT</a>
-
-                <div class="has-sub-menu">
-                  <a role="button">Partner With Us</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="donations.html">Volunteer</a></li>
-                      <li><a href="donations.html">Donate</a></li>
-                      <li><a href="donations.html">Careers & Internships</a></li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="has-sub-menu">
-                  <a role="button">Resources</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="news.html">News & Events</a></li>
-                      <li><a href="news.html">Stories & Publications</a></li>
-                      <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <a href="contact.html">Contact</a>
-              </nav>
-            </div>
-          </div>
-
-          <!-- actions -->
-          <div class="ul-header-actions">
-            <button class="ul-header-search-opener">
-              <i class="flaticon-search"></i>
-            </button>
-            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
-              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-              Get Involved
-            </a>
-            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
-              <i class="flaticon-menu"></i>
-            </button>
+    <!-- FEATURED NEWS SECTION START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container wow animate__fadeInUp">
+        <div class="featured-news" style="margin-top: 20px">
+          <img
+            src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 5.15.48 PM.jpeg"
+            alt="Medical Outreach" />
+          <div class="featured-news-content">
+            <span class="featured-news-date">May 20, 2023</span>
+            <h2 class="featured-news-title">
+              Free Medical Outreach in Benin City
+            </h2>
+            <p>
+              We recently conducted a free medical outreach program in Benin
+              City, providing healthcare services to over 200 individuals from
+              underserved communities.
+            </p>
+            <a href="#" class="ul-btn mt-3"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Read More</a>
           </div>
         </div>
       </div>
-    </header>
-    <!-- HEADER SECTION END -->
+    </section>
+    <!-- FEATURED NEWS SECTION END -->
 
-    <main>
-      <!-- BREADCRUMBS SECTION START -->
-      <section class="ul-breadcrumb ul-section-spacing">
-        <div class="ul-container">
-          <h2 class="ul-breadcrumb-title">News & Events</h2>
-          <ul class="ul-breadcrumb-nav">
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <span class="separator"><i class="flaticon-right"></i></span>
-            </li>
-            <li>News & Events</li>
-          </ul>
-        </div>
-      </section>
-      <!-- BREADCRUMBS SECTION END -->
-
-      <!-- FEATURED NEWS SECTION START -->
-      <section class="ul-section-spacing pt-0">
-        <div class="ul-container wow animate__fadeInUp">
-          <div class="featured-news" style="margin-top: 20px">
-            <img src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/WhatsApp Image 2025-11-17 at 5.15.48 PM.jpeg" alt="Medical Outreach" />
-            <div class="featured-news-content">
-              <span class="featured-news-date">May 20, 2023</span>
-              <h2 class="featured-news-title">
-                Free Medical Outreach in Benin City
-              </h2>
-              <p>
-                We recently conducted a free medical outreach program in Benin
-                City, providing healthcare services to over 200 individuals from
-                underserved communities.
-              </p>
-              <a href="#" class="ul-btn mt-3"
-                ><i
-                  class="flaticon-fast-forward-double-right-arrows-symbol"
-                ></i>
-                Read More</a
-              >
-            </div>
+    <!-- NEWS FILTER SECTION START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container wow animate__fadeInUp">
+        <div class="ul-section-heading text-center mb-4">
+          <div>
+            <span class="ul-section-sub-title">Stay Updated</span>
+            <h2 class="ul-section-title">Latest News & Events</h2>
+            <p class="ul-section-descr">
+              Keep up with the latest news, events, and activities from
+              Kingscity Initiative for Integrated Development.
+            </p>
           </div>
         </div>
-      </section>
-      <!-- FEATURED NEWS SECTION END -->
 
-      <!-- NEWS FILTER SECTION START -->
-      <section class="ul-section-spacing pt-0">
-        <div class="ul-container wow animate__fadeInUp">
-          <div class="ul-section-heading text-center mb-4">
-            <div>
-              <span class="ul-section-sub-title">Stay Updated</span>
-              <h2 class="ul-section-title">Latest News & Events</h2>
-              <p class="ul-section-descr">
-                Keep up with the latest news, events, and activities from
-                Kingscity Initiative for Integrated Development.
-              </p>
-            </div>
-          </div>
+        <div class="news-filter">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Health</button>
+          <button class="filter-btn">Environment</button>
+          <button class="filter-btn">Education</button>
+          <button class="filter-btn">Empowerment</button>
+        </div>
 
-          <div class="news-filter">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Health</button>
-            <button class="filter-btn">Environment</button>
-            <button class="filter-btn">Education</button>
-            <button class="filter-btn">Empowerment</button>
-          </div>
-
-          <div class="row">
-            <!-- News Card 1 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="news-card shadow-sm">
-                <img
-                  src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/ea453f2797b04f4f8bfd5e431a4193b9.jpg"
-                  alt="Medical Outreach"
-                  class="news-image"
-                />
-                <div class="p-4">
-                  <span class="news-date">May 20, 2023</span>
-                  <h3 class="news-title">
-                    Free Medical Outreach in Benin City
-                  </h3>
-                  <p class="news-content">
-                    We recently conducted a free medical outreach program in
-                    Benin City, providing healthcare services to over 200
-                    individuals...
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center mt-4"
-                  >
-                    <a href="news/medical-outreach.html" class="ul-btn-sm"
-                      >Read More</a
-                    >
-                    <div class="social-share">
-                      <a
-                        href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-                        target="_blank"
-                        ><i class="flaticon-twitter"></i
-                      ></a>
-                      <a
-                        href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-                        target="_blank"
-                        ><i class="flaticon-instagram"></i
-                      ></a>
-                    </div>
+        <div class="row">
+          <!-- News Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card shadow-sm">
+              <img
+                src="assets/img/pictures-for-10-programs/1. Health Advocacy & Outreach/ea453f2797b04f4f8bfd5e431a4193b9.jpg"
+                alt="Medical Outreach" class="news-image" />
+              <div class="p-4">
+                <span class="news-date">May 20, 2023</span>
+                <h3 class="news-title">
+                  Free Medical Outreach in Benin City
+                </h3>
+                <p class="news-content">
+                  We recently conducted a free medical outreach program in
+                  Benin City, providing healthcare services to over 200
+                  individuals...
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <a href="news/medical-outreach.html" class="ul-btn-sm">Read More</a>
+                  <div class="social-share">
+                    <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                        class="flaticon-twitter"></i></a>
+                    <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                        class="flaticon-instagram"></i></a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- News Card 2 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="news-card shadow-sm">
-                <img
-                  src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/WhatsApp Image 2025-11-17 at 6.07.48 PM.jpeg"
-                  alt="Environmental Workshop"
-                  class="news-image"
-                />
-                <div class="p-4">
-                  <span class="news-date">April 10, 2023</span>
-                  <h3 class="news-title">Environmental Awareness Workshop</h3>
-                  <p class="news-content">
-                    KiiD organized an environmental awareness workshop targeting
-                    youth in Abuja. The workshop focused on practical ways to
-                    protect...
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center mt-4"
-                  >
-                    <a href="news/environmental-workshop.html" class="ul-btn-sm"
-                      >Read More</a
-                    >
-                    <div class="social-share">
-                      <a
-                        href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-                        target="_blank"
-                        ><i class="flaticon-twitter"></i
-                      ></a>
-                      <a
-                        href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-                        target="_blank"
-                        ><i class="flaticon-instagram"></i
-                      ></a>
-                    </div>
+          <!-- News Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card shadow-sm">
+              <img
+                src="assets/img/pictures-for-10-programs/2. Environmental Protection & Climate Action/WhatsApp Image 2025-11-17 at 6.07.48 PM.jpeg"
+                alt="Environmental Workshop" class="news-image" />
+              <div class="p-4">
+                <span class="news-date">April 10, 2023</span>
+                <h3 class="news-title">Environmental Awareness Workshop</h3>
+                <p class="news-content">
+                  KiiD organized an environmental awareness workshop targeting
+                  youth in Abuja. The workshop focused on practical ways to
+                  protect...
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <a href="news/environmental-workshop.html" class="ul-btn-sm">Read More</a>
+                  <div class="social-share">
+                    <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                        class="flaticon-twitter"></i></a>
+                    <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                        class="flaticon-instagram"></i></a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- News Card 3 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="news-card shadow-sm">
-                <img
-                  src="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/61fff868c1494b3d820be518d5fb3ec1.jpg"
-                  alt="Skills Graduation"
-                  class="news-image"
-                />
-                <div class="p-4">
-                  <span class="news-date">March 5, 2023</span>
-                  <h3 class="news-title">
-                    Skills Acquisition Program Graduation
-                  </h3>
-                  <p class="news-content">
-                    We celebrated the graduation of 30 individuals from our
-                    skills acquisition program in Enugu State. The graduates
-                    received training...
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center mt-4"
-                  >
-                    <a href="news/skills-graduation.html" class="ul-btn-sm"
-                      >Read More</a
-                    >
-                    <div class="social-share">
-                      <a
-                        href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-                        target="_blank"
-                        ><i class="flaticon-twitter"></i
-                      ></a>
-                      <a
-                        href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-                        target="_blank"
-                        ><i class="flaticon-instagram"></i
-                      ></a>
-                    </div>
+          <!-- News Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card shadow-sm">
+              <img
+                src="assets/img/pictures-for-10-programs/3. Socio-Economic Empowerment/61fff868c1494b3d820be518d5fb3ec1.jpg"
+                alt="Skills Graduation" class="news-image" />
+              <div class="p-4">
+                <span class="news-date">March 5, 2023</span>
+                <h3 class="news-title">
+                  Skills Acquisition Program Graduation
+                </h3>
+                <p class="news-content">
+                  We celebrated the graduation of 30 individuals from our
+                  skills acquisition program in Enugu State. The graduates
+                  received training...
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <a href="news/skills-graduation.html" class="ul-btn-sm">Read More</a>
+                  <div class="social-share">
+                    <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                        class="flaticon-twitter"></i></a>
+                    <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                        class="flaticon-instagram"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- NEWS FILTER SECTION END -->
+      </div>
+    </section>
+    <!-- NEWS FILTER SECTION END -->
 
-      <!-- UPCOMING EVENTS SECTION START -->
-      <section class="ul-section-spacing pt-0">
-        <div class="ul-container wow animate__fadeInUp">
-          <div class="ul-section-heading text-center mb-4">
-            <div>
-              <span class="ul-section-sub-title">Mark Your Calendar</span>
-              <h2 class="ul-section-title">Upcoming Events</h2>
-              <p class="ul-section-descr">
-                Join us at our upcoming events and be part of our mission to
-                create positive change.
-              </p>
-            </div>
+    <!-- UPCOMING EVENTS SECTION START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container wow animate__fadeInUp">
+        <div class="ul-section-heading text-center mb-4">
+          <div>
+            <span class="ul-section-sub-title">Mark Your Calendar</span>
+            <h2 class="ul-section-title">Upcoming Events</h2>
+            <p class="ul-section-descr">
+              Join us at our upcoming events and be part of our mission to
+              create positive change.
+            </p>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- Featured Event -->
-              <article class="featured-event mb-4">
-                <div class="card border-0 shadow-sm h-100 bg-light">
-                  <div class="card-body p-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-3"
-                    >
-                      <span class="badge bg-primary px-3 py-2"
-                        >Featured Event</span
-                      >
-                      <span class="text-muted">July 10, 2023</span>
-                    </div>
-                    <h3 class="mb-3">Annual Healthcare & Climate Summit</h3>
-                    <p>
-                      Join us for our annual summit bringing together healthcare
-                      professionals, environmental activists, and community
-                      leaders to discuss integrated approaches to community
-                      development.
-                    </p>
-                    <div class="d-flex align-items-center mt-3">
-                      <i class="flaticon-pin me-2 text-primary"></i>
-                      <span>Conference Center, Benin City</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="flaticon-clock me-2 text-primary"></i>
-                      <span>9:00 AM - 4:00 PM</span>
-                    </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Featured Event -->
+            <article class="featured-event mb-4">
+              <div class="card border-0 shadow-sm h-100 bg-light">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="badge bg-primary px-3 py-2">Featured Event</span>
+                    <span class="text-muted">July 10, 2023</span>
                   </div>
-                </div>
-              </article>
-
-              <!-- Event Card 1 -->
-              <div class="event-card">
-                <div class="event-date">
-                  <span class="event-day">15</span>
-                  <span class="event-month">Jun</span>
-                  <div class="event-countdown" data-date="2023-06-15"></div>
-                </div>
-                <div class="event-details">
-                  <h4 class="event-title">Community Health Fair</h4>
+                  <h3 class="mb-3">Annual Healthcare & Climate Summit</h3>
                   <p>
-                    Free health screenings, consultations, and health education
-                    for community members.
+                    Join us for our annual summit bringing together healthcare
+                    professionals, environmental activists, and community
+                    leaders to discuss integrated approaches to community
+                    development.
                   </p>
-                  <div class="event-location">
-                    <i class="flaticon-pin"></i> Benin City, Edo State
+                  <div class="d-flex align-items-center mt-3">
+                    <i class="flaticon-pin me-2 text-primary"></i>
+                    <span>Conference Center, Benin City</span>
+                  </div>
+                  <div class="d-flex align-items-center mt-2">
+                    <i class="flaticon-clock me-2 text-primary"></i>
+                    <span>9:00 AM - 4:00 PM</span>
                   </div>
                 </div>
               </div>
+            </article>
 
-              <!-- Event Card 2 -->
-              <div class="event-card">
-                <div class="event-date">
-                  <span class="event-day">22</span>
-                  <span class="event-month">Jun</span>
-                  <div class="event-countdown" data-date="2023-06-22"></div>
-                </div>
-                <div class="event-details">
-                  <h4 class="event-title">Tree Planting Initiative</h4>
-                  <p>
-                    Join our environmental restoration efforts as we plant trees
-                    in urban areas.
-                  </p>
-                  <div class="event-location">
-                    <i class="flaticon-pin"></i> Abuja FCT
-                  </div>
-                </div>
+            <!-- Event Card 1 -->
+            <div class="event-card">
+              <div class="event-date">
+                <span class="event-day">15</span>
+                <span class="event-month">Jun</span>
+                <div class="event-countdown" data-date="2023-06-15"></div>
               </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="newsletter-section">
-                <h3>Subscribe to Our Newsletter</h3>
+              <div class="event-details">
+                <h4 class="event-title">Community Health Fair</h4>
                 <p>
-                  Stay updated with our latest news, events, and initiatives.
-                  Join our mailing list today!
+                  Free health screenings, consultations, and health education
+                  for community members.
                 </p>
-                <form class="newsletter-form">
-                  <input
-                    type="email"
-                    placeholder="Your Email Address"
-                    class="newsletter-input"
-                  />
-                  <button type="submit" class="newsletter-btn">
-                    Subscribe
-                  </button>
-                </form>
+                <div class="event-location">
+                  <i class="flaticon-pin"></i> Benin City, Edo State
+                </div>
               </div>
+            </div>
 
-              <div id="job-vacancies" class="job-card">
-                <h3 class="mb-3 text-center">Job Vacancies</h3>
-                <p class="text-center mb-3">
-                  We don't have any open positions right now, but please check
-                  back later for future opportunities.
+            <!-- Event Card 2 -->
+            <div class="event-card">
+              <div class="event-date">
+                <span class="event-day">22</span>
+                <span class="event-month">Jun</span>
+                <div class="event-countdown" data-date="2023-06-22"></div>
+              </div>
+              <div class="event-details">
+                <h4 class="event-title">Tree Planting Initiative</h4>
+                <p>
+                  Join our environmental restoration efforts as we plant trees
+                  in urban areas.
                 </p>
-                <div class="text-center">
-                  <a href="contact.html" class="ul-btn-sm">Volunteer With Us</a>
+                <div class="event-location">
+                  <i class="flaticon-pin"></i> Abuja FCT
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- UPCOMING EVENTS SECTION END -->
 
-      <!-- CTA SECTION START -->
-      <section class="ul-cta">
-        <div class="ul-container">
-          <span class="ul-section-sub-title">Join Us in Creating Change</span>
-          <h2 class="ul-cta-title">
-            Support Our Work for Sustainable Community Development
-          </h2>
-          <a href="donations.html" class="ul-btn"
-            ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-            Make a Donation</a
-          >
-        </div>
-        <img
-          src="assets/img/cta-vector.svg"
-          alt="Vector"
-          class="ul-cta-vector"
-        />
-      </section>
-      <!-- CTA SECTION END -->
-    </main>
-
-    <!-- FOOTER SECTION START -->
-    <footer class="ul-footer">
-      <div class="ul-footer-top">
-        <div class="ul-footer-container">
-          <div class="ul-footer-top-contact-infos">
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-pin"></i>
-                </div>
-              </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Address</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
-                </h5>
-              </div>
+          <div class="col-lg-6">
+            <div class="newsletter-section">
+              <h3>Subscribe to Our Newsletter</h3>
+              <p>
+                Stay updated with our latest news, events, and initiatives.
+                Join our mailing list today!
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" class="newsletter-input" />
+                <button type="submit" class="newsletter-btn">
+                  Subscribe
+                </button>
+              </form>
             </div>
 
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-email"></i>
-                </div>
-              </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Send Email</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  <a href="mailto:kingscity.dev@gmail.com "
-                    >kingscity.dev@gmail.com
-                  </a>
-                </h5>
-              </div>
-            </div>
-
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-telephone-call-1"></i>
-                </div>
-              </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Contact Us</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  <a href="tel:+2349029940489">+234 902 994 0489</a>
-                </h5>
+            <div id="job-vacancies" class="job-card">
+              <h3 class="mb-3 text-center">Job Vacancies</h3>
+              <p class="text-center mb-3">
+                We don't have any open positions right now, but please check
+                back later for future opportunities.
+              </p>
+              <div class="text-center">
+                <a href="contact.html" class="ul-btn-sm">Volunteer With Us</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <!-- UPCOMING EVENTS SECTION END -->
 
-      <div class="ul-footer-middle">
-        <div class="ul-footer-container">
-          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
-            <div class="ul-footer-about">
-              <a href="index.html" class="custom-logo white">
-                <img
-                  src="assets/img/logo-icon.jpeg"
-                  alt="KiiD logo"
-                  style="width: 80px; height: 80px"
-                />
-                <span
-                  class="logo-text"
-                  style="
+    <!-- CTA SECTION START -->
+    <section class="ul-cta">
+      <div class="ul-container">
+        <span class="ul-section-sub-title">Join Us in Creating Change</span>
+        <h2 class="ul-cta-title">
+          Support Our Work for Sustainable Community Development
+        </h2>
+        <a href="donations.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+          Make a Donation</a>
+      </div>
+      <img src="assets/img/cta-vector.svg" alt="Vector" class="ul-cta-vector" />
+    </section>
+    <!-- CTA SECTION END -->
+  </main>
+
+  <!-- FOOTER SECTION START -->
+  <footer class="ul-footer">
+    <div class="ul-footer-top">
+      <div class="ul-footer-container">
+        <div class="ul-footer-top-contact-infos">
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-pin"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Address</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-email"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Send Email</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="mailto:kingscity.dev@gmail.com ">kingscity.dev@gmail.com
+                </a>
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-telephone-call-1"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Contact Us</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="tel:+2349029940489">+234 902 994 0489</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-footer-middle">
+      <div class="ul-footer-container">
+        <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+          <div class="ul-footer-about">
+            <a href="index.html" class="custom-logo white">
+              <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+              <span class="logo-text" style="
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                       'Trebuchet MS', sans-serif;
                     margin-left: -5px;
                     font-size: 32px;
                     color: #fff;
-                  "
-                  >KiiD</span
-                >
-              </a>
-              <p class="ul-footer-about-txt">
-                Kingscity Initiative for Integrated Development (KiiD) is
-                dedicated to building thriving communities through healthcare
-                access, environmental sustainability, and socio-economic
-                empowerment.
-              </p>
-              <div class="ul-footer-socials">
-                <a
-                  href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-                  target="_blank"
-                  ><i class="flaticon-twitter"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-                  target="_blank"
-                  ><i class="flaticon-instagram"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Quick Links</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="about.html">About Us</a>
-                <a href="services.html">Our Programs</a>
-                <a href="news.html">News & Events</a>
-                <a href="contact.html">Contact Us</a>
-              </div>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Our Impact</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="about.html#our-impact"
-                  >Over 1,000 people reached through health outreach</a
-                >
-                <a href="about.html#our-impact"
-                  >3,000+ youth educated on climate action</a
-                >
-                <a href="about.html#our-impact"
-                  >150+ individuals trained in market-relevant skills</a
-                >
-                <a href="about.html#our-impact"
-                  >5,000+ trees planted for environmental restoration</a
-                >
-              </div>
-            </div>
-
-            <div class="ul-footer-widget ul-nwsltr-widget">
-              <h3 class="ul-footer-widget-title">Get Involved</h3>
-              <div class="ul-footer-widget-links ul-footer-contact-links">
-                <a href="mailto:kingscity.dev@gmail.com "
-                  ><i class="flaticon-mail"></i> kingscity.dev@gmail.com
-                </a>
-                <a href="tel:+2349029940489"
-                  ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
-                >
-              </div>
-              <form class="ul-nwsltr-form">
-                <div class="top">
-                  <input
-                    type="email"
-                    name="email"
-                    id="nwsltr-email"
-                    placeholder="Your Email Address"
-                    class="ul-nwsltr-input"
-                    required
-                  />
-                  <button type="submit"><i class="flaticon-next"></i></button>
-                </div>
-
-                <div class="agreement">
-                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
-                    <input
-                      type="checkbox"
-                      name="agreement"
-                      id="nwsltr-agreement"
-                      required
-                    />
-                    <span class="ul-checkbox"
-                      ><i class="flaticon-tick"></i
-                    ></span>
-                    <span class="ul-checkbox-txt"
-                      >I agree with the
-                      <a href="privacy-policy.html">Privacy Policy</a></span
-                    >
-                  </label>
-                </div>
-              </form>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Our Offices</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="contact.html">
-                  <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
-                  Benin City
-                </a>
-                <a href="contact.html">
-                  <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
-                </a>
-                <a href="contact.html">
-                  <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
-                </a>
-                <a href="tel:+2349029940489">+234 902 994 0489</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer bottom -->
-      <div class="ul-footer-bottom">
-        <div class="ul-footer-container">
-          <div class="ul-footer-bottom-wrapper">
-            <p class="copyright-txt">
-              &copy; <span id="footer-copyright-year"></span> Kingscity
-              Initiative for Integrated Development. All rights reserved
+                  ">KiiD</span>
+            </a>
+            <p class="ul-footer-about-txt">
+              Kingscity Initiative for Integrated Development (KiiD) is
+              dedicated to building thriving communities through healthcare
+              access, environmental sustainability, and socio-economic
+              empowerment.
             </p>
-            <div class="ul-footer-bottom-nav">
-              <a href="terms-and-conditions.html">Terms & Conditions</a>
-              <a href="privacy-policy.html">Privacy Policy</a>
+            <div class="ul-footer-socials">
+              <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                  class="flaticon-twitter"></i></a>
+              <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                  class="flaticon-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Our Programs</a>
+              <a href="news.html">News & Events</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Impact</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html#our-impact">Over 1,000 people reached through health outreach</a>
+              <a href="about.html#our-impact">3,000+ youth educated on climate action</a>
+              <a href="about.html#our-impact">150+ individuals trained in market-relevant skills</a>
+              <a href="about.html#our-impact">5,000+ trees planted for environmental restoration</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget ul-nwsltr-widget">
+            <h3 class="ul-footer-widget-title">Get Involved</h3>
+            <div class="ul-footer-widget-links ul-footer-contact-links">
+              <a href="mailto:kingscity.dev@gmail.com "><i class="flaticon-mail"></i> kingscity.dev@gmail.com
+              </a>
+              <a href="tel:+2349029940489"><i class="flaticon-telephone-call"></i> +234 902 994 0489</a>
+            </div>
+            <form class="ul-nwsltr-form">
+              <div class="top">
+                <input type="email" name="email" id="nwsltr-email" placeholder="Your Email Address"
+                  class="ul-nwsltr-input" required />
+                <button type="submit"><i class="flaticon-next"></i></button>
+              </div>
+
+              <div class="agreement">
+                <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                  <input type="checkbox" name="agreement" id="nwsltr-agreement" required />
+                  <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
+                  <span class="ul-checkbox-txt">I agree with the
+                    <a href="privacy-policy.html">Privacy Policy</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Offices</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="contact.html">
+                <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                Benin City
+              </a>
+              <a href="contact.html">
+                <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+              </a>
+              <a href="contact.html">
+                <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+              </a>
+              <a href="tel:+2349029940489">+234 902 994 0489</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- vector -->
-      <div class="ul-footer-vectors">
-        <img
-          src="assets/img/footer-vector-img.png"
-          alt="Footer Image"
-          class="ul-footer-vector-1"
-        />
+    <!-- footer bottom -->
+    <div class="ul-footer-bottom">
+      <div class="ul-footer-container">
+        <div class="ul-footer-bottom-wrapper">
+          <p class="copyright-txt">
+            &copy; <span id="footer-copyright-year"></span> Kingscity
+            Initiative for Integrated Development. All rights reserved
+          </p>
+          <div class="ul-footer-bottom-nav">
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
       </div>
-    </footer>
-    <!-- FOOTER SECTION END -->
+    </div>
 
-    <!-- libraries JS -->
-    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/splide/splide.min.js"></script>
-    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
-    <script src="assets/vendor/animate-wow/wow.min.js"></script>
-    <script src="assets/vendor/splittype/index.min.js"></script>
-    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
-    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
-    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+    <!-- vector -->
+    <div class="ul-footer-vectors">
+      <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1" />
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
 
-    <!-- custom JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/tab.js"></script>
-    <script src="assets/js/accordion.js"></script>
-    <script src="assets/js/progressbar.js"></script>
-    <script src="assets/js/form-handler.js"></script>
+  <!-- libraries JS -->
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/splide/splide.min.js"></script>
+  <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+  <script src="assets/vendor/animate-wow/wow.min.js"></script>
+  <script src="assets/vendor/splittype/index.min.js"></script>
+  <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+  <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.js"></script>
 
-    <!-- Filter functionality for news cards -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all filter buttons and news cards
-        const filterBtns = document.querySelectorAll(".filter-btn");
-        const newsCards = document.querySelectorAll(".news-card");
+  <!-- custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/form-handler.js"></script>
 
-        // Add click event to filter buttons
-        filterBtns.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            // Remove active class from all buttons
-            filterBtns.forEach((b) => b.classList.remove("active"));
+  <!-- Filter functionality for news cards -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get all filter buttons and news cards
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const newsCards = document.querySelectorAll(".news-card");
 
-            // Add active class to clicked button
-            this.classList.add("active");
+      // Add click event to filter buttons
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          // Remove active class from all buttons
+          filterBtns.forEach((b) => b.classList.remove("active"));
 
-            // Get the filter category
-            const filterCategory = this.textContent.toLowerCase();
+          // Add active class to clicked button
+          this.classList.add("active");
 
-            // Show/hide cards based on filter
-            if (filterCategory === "all") {
-              newsCards.forEach((card) => {
+          // Get the filter category
+          const filterCategory = this.textContent.toLowerCase();
+
+          // Show/hide cards based on filter
+          if (filterCategory === "all") {
+            newsCards.forEach((card) => {
+              card.style.display = "block";
+            });
+          } else {
+            newsCards.forEach((card) => {
+              // Get category from card (in this example, checking card title text)
+              const cardTitle = card
+                .querySelector(".news-title")
+                .textContent.toLowerCase();
+
+              if (cardTitle.includes(filterCategory)) {
                 card.style.display = "block";
-              });
-            } else {
-              newsCards.forEach((card) => {
-                // Get category from card (in this example, checking card title text)
-                const cardTitle = card
-                  .querySelector(".news-title")
-                  .textContent.toLowerCase();
-
-                if (cardTitle.includes(filterCategory)) {
-                  card.style.display = "block";
-                } else {
-                  card.style.display = "none";
-                }
-              });
-            }
-          });
+              } else {
+                card.style.display = "none";
+              }
+            });
+          }
         });
       });
-    </script>
+    });
+  </script>
 
-    <!-- Event countdown and smooth scroll functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Smooth scroll functionality for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            if (this.getAttribute("href") !== "#") {
-              e.preventDefault();
+  <!-- Event countdown and smooth scroll functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Smooth scroll functionality for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          if (this.getAttribute("href") !== "#") {
+            e.preventDefault();
 
-              const targetId = this.getAttribute("href");
-              const targetElement = document.querySelector(targetId);
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
 
-              if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop - 100,
-                  behavior: "smooth",
-                });
-              }
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: "smooth",
+              });
             }
-          });
+          }
         });
+      });
 
-        // Event countdown functionality
-        const countdownElements = document.querySelectorAll(".event-countdown");
+      // Event countdown functionality
+      const countdownElements = document.querySelectorAll(".event-countdown");
 
-        countdownElements.forEach((countdown) => {
-          const targetDate = new Date(countdown.getAttribute("data-date"));
+      countdownElements.forEach((countdown) => {
+        const targetDate = new Date(countdown.getAttribute("data-date"));
 
-          // Update countdown
-          function updateCountdown() {
-            const now = new Date();
-            const difference = targetDate - now;
+        // Update countdown
+        function updateCountdown() {
+          const now = new Date();
+          const difference = targetDate - now;
 
-            if (difference <= 0) {
-              countdown.textContent = "Today!";
-              return;
-            }
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            countdown.textContent = days <= 0 ? "Soon!" : `${days} days`;
+          if (difference <= 0) {
+            countdown.textContent = "Today!";
+            return;
           }
 
-          // Initial update
-          updateCountdown();
-
-          // Update daily (no need for more frequent updates)
-          setInterval(updateCountdown, 86400000);
-        });
-      });
-    </script>
-
-    <!-- Newsletter subscription functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the newsletter form
-        const newsletterForm = document.querySelector(".newsletter-form");
-
-        if (newsletterForm) {
-          newsletterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Get email input
-            const emailInput = this.querySelector(".newsletter-input");
-            const email = emailInput.value.trim();
-
-            // Simple validation
-            if (!email || !email.includes("@") || !email.includes(".")) {
-              alert("Please enter a valid email address");
-              return;
-            }
-
-            // Here you would normally send this to your backend
-            // For now, we'll just show a success message
-            const formParent = this.parentElement;
-
-            // Create success message
-            const successDiv = document.createElement("div");
-            successDiv.className = "alert alert-success mt-3";
-            successDiv.role = "alert";
-            successDiv.textContent =
-              "Thank you for subscribing to our newsletter!";
-
-            // Clear form and append success message
-            this.style.display = "none";
-            formParent.appendChild(successDiv);
-
-            // Reset form for future use
-            this.reset();
-
-            // Remove success message after 5 seconds
-            setTimeout(() => {
-              successDiv.remove();
-              this.style.display = "flex";
-            }, 5000);
-          });
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          countdown.textContent = days <= 0 ? "Soon!" : `${days} days`;
         }
+
+        // Initial update
+        updateCountdown();
+
+        // Update daily (no need for more frequent updates)
+        setInterval(updateCountdown, 86400000);
       });
-    </script>
+    });
+  </script>
 
-    <!-- Share functionality for news articles -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all social share buttons
-        const shareButtons = document.querySelectorAll(".social-share a");
+  <!-- Newsletter subscription functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the newsletter form
+      const newsletterForm = document.querySelector(".newsletter-form");
 
-        // Add click event to share buttons
-        shareButtons.forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            e.preventDefault();
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", function (e) {
+          e.preventDefault();
 
-            const platform = this.querySelector("i").className;
-            const newsTitle =
-              this.closest(".news-card, .card").querySelector("h3").textContent;
-            const url = window.location.href;
-            let shareUrl = "";
+          // Get email input
+          const emailInput = this.querySelector(".newsletter-input");
+          const email = emailInput.value.trim();
 
-            // Determine which platform to share on
-            if (platform.includes("twitter")) {
-              shareUrl = `https://twitter.com/intent/tweet?text=${newsTitle}&url=${url}`;
-              window.open(shareUrl, "_blank", "width=600,height=400");
-            } else if (platform.includes("instagram")) {
-              // Instagram doesn't have a direct sharing URL API like Twitter
-              alert("Please copy this link to share on Instagram: " + url);
-            }
-          });
+          // Simple validation
+          if (!email || !email.includes("@") || !email.includes(".")) {
+            alert("Please enter a valid email address");
+            return;
+          }
+
+          // Here you would normally send this to your backend
+          // For now, we'll just show a success message
+          const formParent = this.parentElement;
+
+          // Create success message
+          const successDiv = document.createElement("div");
+          successDiv.className = "alert alert-success mt-3";
+          successDiv.role = "alert";
+          successDiv.textContent =
+            "Thank you for subscribing to our newsletter!";
+
+          // Clear form and append success message
+          this.style.display = "none";
+          formParent.appendChild(successDiv);
+
+          // Reset form for future use
+          this.reset();
+
+          // Remove success message after 5 seconds
+          setTimeout(() => {
+            successDiv.remove();
+            this.style.display = "flex";
+          }, 5000);
+        });
+      }
+    });
+  </script>
+
+  <!-- Share functionality for news articles -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get all social share buttons
+      const shareButtons = document.querySelectorAll(".social-share a");
+
+      // Add click event to share buttons
+      shareButtons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const platform = this.querySelector("i").className;
+          const newsTitle =
+            this.closest(".news-card, .card").querySelector("h3").textContent;
+          const url = window.location.href;
+          let shareUrl = "";
+
+          // Determine which platform to share on
+          if (platform.includes("twitter")) {
+            shareUrl = `https://twitter.com/intent/tweet?text=${newsTitle}&url=${url}`;
+            window.open(shareUrl, "_blank", "width=600,height=400");
+          } else if (platform.includes("instagram")) {
+            // Instagram doesn't have a direct sharing URL API like Twitter
+            alert("Please copy this link to share on Instagram: " + url);
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

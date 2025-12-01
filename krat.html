@@ -1,594 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      KRAT - KIID Research and Assessment Team | Kingscity Initiative for Integrated Development (KiiD)
-    </title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    KRAT - KIID Research and Assessment Team | Kingscity Initiative for Integrated Development (KiiD)
+  </title>
 
-    <!-- libraries CSS -->
-    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
-    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
-    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
 
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom-logo.css" />
-    <link rel="stylesheet" href="assets/css/loading-indicator.css" />
-  </head>
+  <!-- libraries CSS -->
+  <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+  <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+  <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-  <body>
-    <div class="preloader" id="preloader">
-      <div class="loader"></div>
-    </div>
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom-logo.css" />
+  <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+</head>
 
-    <!-- SIDEBAR SECTION START -->
-    <div class="ul-sidebar">
-      <!-- header -->
-      <div class="ul-sidebar-header">
-        <div class="ul-sidebar-header-logo">
-          <a href="index.html" class="custom-logo">
-            <img
-              src="assets/img/logo-icon.jpeg"
-              alt="KiiD logo"
-              style="width: 80px; height: 80px"
-            />
-            <span
-              class="logo-text"
-              style="
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- SIDEBAR SECTION START -->
+  <div class="ul-sidebar">
+    <!-- header -->
+    <div class="ul-sidebar-header">
+      <div class="ul-sidebar-header-logo">
+        <a href="index.html" class="custom-logo">
+          <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+          <span class="logo-text" style="
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                   'Trebuchet MS', sans-serif;
                 margin-left: -5px;
                 font-size: 32px;
-              "
-              >KiiD</span
-            >
-          </a>
-        </div>
-        <!-- sidebar closer -->
-        <button class="ul-sidebar-closer">
-          <i class="flaticon-close"></i>
+              ">KiiD</span>
+        </a>
+      </div>
+      <!-- sidebar closer -->
+      <button class="ul-sidebar-closer">
+        <i class="flaticon-close"></i>
+      </button>
+    </div>
+
+    <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+    <!-- sidebar footer -->
+    <div class="ul-sidebar-footer">
+      <span class="ul-sidebar-footer-title">Contact Us</span>
+
+      <div class="ul-sidebar-footer-info">
+        <p>+234 902 994 0489</p>
+        <p>kingscity.dev@gmail.com</p>
+      </div>
+
+      <div class="ul-sidebar-footer-social">
+        <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+            class="flaticon-twitter"></i></a>
+        <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+            class="flaticon-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- SIDEBAR SECTION END -->
+
+  <!-- SEARCH MODAL SECTION START -->
+  <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+    <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+    <form action="krat.html#" class="ul-search-form">
+      <div class="ul-search-form-right">
+        <input type="search" name="search" id="ul-search" placeholder="Search Here" />
+        <button type="submit">
+          <span class="icon"><i class="flaticon-search"></i></span>
         </button>
       </div>
+    </form>
+  </div>
+  <!-- SEARCH MODAL SECTION END -->
 
-      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
-
-      <!-- sidebar footer -->
-      <div class="ul-sidebar-footer">
-        <span class="ul-sidebar-footer-title">Contact Us</span>
-
-        <div class="ul-sidebar-footer-info">
-          <p>+234 902 994 0489</p>
-          <p>kingscity.dev@gmail.com</p>
-        </div>
-
-        <div class="ul-sidebar-footer-social">
-          <a
-            href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-            target="_blank"
-            ><i class="flaticon-twitter"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-            target="_blank"
-            ><i class="flaticon-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-    <!-- SIDEBAR SECTION END -->
-
-    <!-- SEARCH MODAL SECTION START -->
-    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
-      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
-
-      <form action="krat.html#" class="ul-search-form">
-        <div class="ul-search-form-right">
-          <input
-            type="search"
-            name="search"
-            id="ul-search"
-            placeholder="Search Here"
-          />
-          <button type="submit">
-            <span class="icon"><i class="flaticon-search"></i></span>
-          </button>
-        </div>
-      </form>
-    </div>
-    <!-- SEARCH MODAL SECTION END -->
-
-    <!-- HEADER SECTION START -->
-    <header class="ul-header">
-      <div class="ul-header-bottom to-be-sticky">
-        <div class="ul-header-bottom-wrapper ul-header-container">
-          <div class="logo-container">
-            <a
-              href="index.html"
-              class="d-inline-block custom-logo"
-              style="margin-top: 10px"
-            >
-              <img
-                src="assets/img/logo-icon.jpeg"
-                alt="KiiD logo"
-                style="width: 80px; height: 80px"
-              />
-              <span
-                class="logo-text"
-                style="
+  <!-- HEADER SECTION START -->
+  <header class="ul-header">
+    <div class="ul-header-bottom to-be-sticky">
+      <div class="ul-header-bottom-wrapper ul-header-container">
+        <div class="logo-container">
+          <a href="index.html" class="d-inline-block custom-logo" style="margin-top: 10px">
+            <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+            <span class="logo-text" style="
                   font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                     'Trebuchet MS', sans-serif;
                   margin-left: -5px;
                   font-size: 32px;
                   color: #ebbf10;
-                "
-                >KiiD</span
-              >
-            </a>
+                ">KiiD</span>
+          </a>
+        </div>
+
+        <!-- header nav -->
+        <div class="ul-header-nav-wrapper">
+          <div class="to-go-to-sidebar-in-mobile">
+            <nav class="ul-header-nav">
+              <a href="index.html">Home</a>
+
+              <div class="has-sub-menu">
+                <a role="button">About Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+                    <li><a href="about.html#approach">Our Approach</a></li>
+                    <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Our Programs</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
+                    <li><a href="services.html#environment">Environmental & Climate Action</a></li>
+                    <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
+                    <li><a href="services.html#protection">Protection & MHPSS</a></li>
+                    <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
+                    <li><a href="services.html#research">Research & Evaluation</a></li>
+                    <li><a href="services.html#education">Education & Learning Support</a></li>
+                    <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
+                    <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
+                    <li><a href="services.html#community">Community Development</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="krat.html">KRAT</a>
+
+              <div class="has-sub-menu">
+                <a role="button">Partner With Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="donations.html">Volunteer</a></li>
+                    <li><a href="donations.html">Donate</a></li>
+                    <li><a href="donations.html">Careers & Internships</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Resources</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="news.html">Stories & Publications</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="contact.html">Contact</a>
+            </nav>
           </div>
+        </div>
 
-          <!-- header nav -->
-          <div class="ul-header-nav-wrapper">
-            <div class="to-go-to-sidebar-in-mobile">
-              <nav class="ul-header-nav">
-                <a href="index.html">Home</a>
-                
-                <div class="has-sub-menu">
-                  <a role="button">About Us</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="about.html">Who We Are</a></li>
-                      <li><a href="about.html#mission-vision">Mission & Vision</a></li>
-                      <li><a href="about.html#approach">Our Approach</a></li>
-                      <li><a href="about.html#values">Our Values</a></li>
-                      <li><a href="about.html#team">Our Team</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="has-sub-menu">
-                  <a role="button">Our Program</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
-                      <li><a href="services.html#environment">Environmental & Climate Action</a></li>
-                      <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
-                      <li><a href="services.html#protection">Protection & MHPSS</a></li>
-                      <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
-                      <li><a href="services.html#research">Research & Evaluation</a></li>
-                      <li><a href="services.html#education">Education & Learning Support</a></li>
-                      <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
-                      <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
-                      <li><a href="services.html#community">Community Development</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <a href="krat.html">KRAT</a>
-
-                <div class="has-sub-menu">
-                  <a role="button">Partner With Us</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="donations.html">Volunteer</a></li>
-                      <li><a href="donations.html">Donate</a></li>
-                      <li><a href="donations.html">Careers & Internships</a></li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="has-sub-menu">
-                  <a role="button">Resources</a>
-                  <div class="ul-header-submenu">
-                    <ul>
-                      <li><a href="news.html">News & Events</a></li>
-                      <li><a href="news.html">Stories & Publications</a></li>
-                      <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <a href="contact.html">Contact</a>
-              </nav>
-            </div>
-          </div>
-
-          <!-- actions -->
-          <div class="ul-header-actions">
-            <button class="ul-header-search-opener">
-              <i class="flaticon-search"></i>
-            </button>
-            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none">
-              <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-              Get Involved
-            </a>
-            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
-              <i class="flaticon-menu"></i>
-            </button>
-          </div>
+        <!-- actions -->
+        <div class="ul-header-actions">
+          <button class="ul-header-search-opener">
+            <i class="flaticon-search"></i>
+          </button>
+          <a href="contact.html" class="ul-btn d-sm-inline-flex d-none">
+            <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Get Involved
+          </a>
+          <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+            <i class="flaticon-menu"></i>
+          </button>
         </div>
       </div>
-    </header>
-    <!-- HEADER SECTION END -->
+    </div>
+  </header>
+  <!-- HEADER SECTION END -->
 
-    <main>
-      <!-- BREADCRUMBS SECTION START -->
-      <section class="ul-breadcrumb ul-section-spacing">
-        <div class="ul-container">
-          <h2 class="ul-breadcrumb-title">KRAT- KIID Research & Assessment Team</h2>
-          <ul class="ul-breadcrumb-nav">
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <span class="separator"><i class="flaticon-right"></i></span>
-            </li>
-            <li>KRAT</li>
-          </ul>
+  <main>
+    <!-- BREADCRUMBS SECTION START -->
+    <section class="ul-breadcrumb ul-section-spacing">
+      <div class="ul-container">
+        <h2 class="ul-breadcrumb-title">KRAT- KIID Research & Assessment Team</h2>
+        <ul class="ul-breadcrumb-nav">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <span class="separator"><i class="flaticon-right"></i></span>
+          </li>
+          <li>KRAT</li>
+        </ul>
+      </div>
+    </section>
+    <!-- BREADCRUMBS SECTION END -->
+
+    <!-- KRAT HERO SECTION START -->
+    <section class="ul-section-spacing pt-0"
+      style="background: linear-gradient(rgba(235, 83, 16, 0.9), rgba(255, 107, 53, 0.9)), url('assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.53 PM.jpeg') center/cover no-repeat; padding: 80px 0; position: relative;">
+      <div class="ul-container">
+        <div class="text-center mb-5">
+          <span class="ul-section-sub-title" style="color: #fff;">KRAT</span>
+          <h2 class="ul-section-title" style="color: #fff;">KIID Research and Assessment Team</h2>
+          <p class="lead"
+            style="color: #fff; font-weight: 600; font-style: italic; font-size: 1.5rem; margin-top: 20px;">"Gathering
+            Evidence. Inspiring Impact."</p>
         </div>
-      </section>
-      <!-- BREADCRUMBS SECTION END -->
+      </div>
+    </section>
+    <!-- KRAT HERO SECTION END -->
 
-      <!-- KRAT HERO SECTION START -->
-      <section class="ul-section-spacing pt-0" style="background: linear-gradient(rgba(235, 83, 16, 0.9), rgba(255, 107, 53, 0.9)), url('assets/img/pictures-for-10-programs/6. Research & Evaluation/WhatsApp Image 2025-11-17 at 11.08.53 PM.jpeg') center/cover no-repeat; padding: 80px 0; position: relative;">
-        <div class="ul-container">
-          <div class="text-center mb-5">
-            <span class="ul-section-sub-title" style="color: #fff;">KRAT</span>
-            <h2 class="ul-section-title" style="color: #fff;">KIID Research and Assessment Team</h2>
-            <p class="lead" style="color: #fff; font-weight: 600; font-style: italic; font-size: 1.5rem; margin-top: 20px;">"Gathering Evidence. Inspiring Impact."</p>
-          </div>
-        </div>
-      </section>
-      <!-- KRAT HERO SECTION END -->
-
-      <!-- KRAT MAIN CONTENT START -->
-      <section class="ul-section-spacing pt-0">
-        <div class="ul-container">
-          <div class="row gy-5">
-            <div class="col-lg-6">
-              <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 20px;">About KRAT</h3>
-              <p style="color: #666; line-height: 1.8;">
-                The KIID Research and Assessment Team (KRAT) is the volunteer-driven research, field, and analytical arm of Kingscity Initiative for Integrated Development (KIID). KRAT is made up of highly trained volunteer members present across all 36 states and the FCT, enabling rapid, nationwide field coverage for research and assessment activities.
-              </p>
-              <p style="color: #666; line-height: 1.8;">
-                As the core engine behind KIID's evidence-generation work, KRAT conducts high-quality field research, surveys, assessments, and evaluations that guide programme design, strengthen monitoring, and enhance learning.
-              </p>
-              <p style="color: #666; line-height: 1.8;">
-                Every KRAT volunteer brings a blend of strong technical skills, ethical research standards, and a deep commitment to community development—making KRAT one of Nigeria's most trusted grassroots research networks.
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-5" style="background: linear-gradient(135deg, #eb5310 0%, #ff6b35 100%); border-radius: 20px; color: white;">
-                <h4 class="mb-4" style="font-weight: 700;">KRAT ensures all interventions are:</h4>
-                <ul style="line-height: 2; font-size: 1.05rem;">
-                  <li><strong>Data-driven</strong> – informed by accurate, timely, and reliable evidence</li>
-                  <li><strong>People-centered</strong> – shaped by the lived realities of individuals and communities</li>
-                  <li><strong>Ethical & transparent</strong> – grounded in best practices for responsible research</li>
-                  <li><strong>Context-sensitive</strong> – reflecting genuine community needs and local dynamics</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mt-5 gy-4">
-            <div class="col-lg-6">
-              <div class="p-4 bg-white rounded shadow-sm h-100" style="border-left: 4px solid #eb5310;">
-                <h5 style="font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">What We Do</h5>
-                <ul style="color: #666; line-height: 2;">
-                  <li>Field-based surveys & assessments</li>
-                  <li>Baseline, midline, and endline studies</li>
-                  <li>Monitoring, Evaluation & Learning (MEL) support</li>
-                  <li>Qualitative & quantitative research</li>
-                  <li>Data cleaning, analysis, visualization & reporting</li>
-                  <li>Community engagement & participatory research</li>
-                  <li>Evidence generation for programmes, policies & advocacy</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-4 bg-white rounded shadow-sm h-100" style="border-left: 4px solid #eb5310;">
-                <h5 style="font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Why KRAT?</h5>
-                <ul style="color: #666; line-height: 2;">
-                  <li>Nationwide presence across all 36 states & FCT</li>
-                  <li>Trained volunteer enumerators with strong methodological skills</li>
-                  <li>Rapid deployment capability for time-sensitive fieldwork</li>
-                  <li>Strong ethical and quality assurance standards</li>
-                  <li>Accurate, credible, and context-grounded data</li>
-                  <li>Deep community entry and trust</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center mt-5 p-5" style="background: #f8f9fa; border-radius: 20px;">
-            <h4 style="font-weight: 700; color: #1a1a1a; margin-bottom: 20px;">Hire KRAT for External Projects</h4>
-            <p style="color: #666; max-width: 800px; margin: 0 auto 30px; line-height: 1.8;">
-              KRAT services are available for external contracting. We support NGOs, INGOs, Research Firms, Government Agencies, CSOs, Foundations, and Donors seeking credible, ethical, and timely field data across Nigeria.
+    <!-- KRAT MAIN CONTENT START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container">
+        <div class="row gy-5">
+          <div class="col-lg-6">
+            <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 20px;">About KRAT</h3>
+            <p style="color: #666; line-height: 1.8;">
+              The KIID Research and Assessment Team (KRAT) is the volunteer-driven research, field, and analytical arm
+              of Kingscity Initiative for Integrated Development (KIID). KRAT is made up of highly trained volunteer
+              members present across all 36 states and the FCT, enabling rapid, nationwide field coverage for research
+              and assessment activities.
             </p>
-            <div class="d-flex gap-3 justify-content-center flex-wrap">
-              <a href="contact.html" class="ul-btn">
-                <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-                Request KRAT Services
-              </a>
-              <a href="mailto:kingscity.dev@gmail.com" class="ul-btn" style="background: #1a1a1a;">
-                <i class="flaticon-email"></i>
-                Email Us
-              </a>
+            <p style="color: #666; line-height: 1.8;">
+              As the core engine behind KIID's evidence-generation work, KRAT conducts high-quality field research,
+              surveys, assessments, and evaluations that guide programme design, strengthen monitoring, and enhance
+              learning.
+            </p>
+            <p style="color: #666; line-height: 1.8;">
+              Every KRAT volunteer brings a blend of strong technical skills, ethical research standards, and a deep
+              commitment to community development—making KRAT one of Nigeria's most trusted grassroots research
+              networks.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5"
+              style="background: linear-gradient(135deg, #eb5310 0%, #ff6b35 100%); border-radius: 20px; color: white;">
+              <h4 class="mb-4" style="font-weight: 700;">KRAT ensures all interventions are:</h4>
+              <ul style="line-height: 2; font-size: 1.05rem;">
+                <li><strong>Data-driven</strong> – informed by accurate, timely, and reliable evidence</li>
+                <li><strong>People-centered</strong> – shaped by the lived realities of individuals and communities</li>
+                <li><strong>Ethical & transparent</strong> – grounded in best practices for responsible research</li>
+                <li><strong>Context-sensitive</strong> – reflecting genuine community needs and local dynamics</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-      <!-- KRAT MAIN CONTENT END -->
 
-      <!-- CTA SECTION START -->
-      <section class="ul-cta">
-        <div class="ul-container">
-          <span class="ul-section-sub-title">Join KRAT</span>
-          <h2 class="ul-cta-title">
-            Become Part of Nigeria's Leading Research Network
-          </h2>
-          <a href="contact.html" class="ul-btn"
-            ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-            Get Involved</a
-          >
+        <div class="row mt-5 gy-4">
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded shadow-sm h-100" style="border-left: 4px solid #eb5310;">
+              <h5 style="font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">What We Do</h5>
+              <ul style="color: #666; line-height: 2;">
+                <li>Field-based surveys & assessments</li>
+                <li>Baseline, midline, and endline studies</li>
+                <li>Monitoring, Evaluation & Learning (MEL) support</li>
+                <li>Qualitative & quantitative research</li>
+                <li>Data cleaning, analysis, visualization & reporting</li>
+                <li>Community engagement & participatory research</li>
+                <li>Evidence generation for programmes, policies & advocacy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded shadow-sm h-100" style="border-left: 4px solid #eb5310;">
+              <h5 style="font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Why KRAT?</h5>
+              <ul style="color: #666; line-height: 2;">
+                <li>Nationwide presence across all 36 states & FCT</li>
+                <li>Trained volunteer enumerators with strong methodological skills</li>
+                <li>Rapid deployment capability for time-sensitive fieldwork</li>
+                <li>Strong ethical and quality assurance standards</li>
+                <li>Accurate, credible, and context-grounded data</li>
+                <li>Deep community entry and trust</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <img
-          src="assets/img/cta-vector.svg"
-          alt="Vector"
-          class="ul-cta-vector"
-        />
-      </section>
-      <!-- CTA SECTION END -->
-    </main>
 
-    <!-- FOOTER SECTION START -->
-    <footer class="ul-footer">
-      <div class="ul-footer-top">
-        <div class="ul-footer-container">
-          <div class="ul-footer-top-contact-infos">
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-pin"></i>
-                </div>
-              </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Address</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
-                </h5>
+        <div class="text-center mt-5 p-5" style="background: #f8f9fa; border-radius: 20px;">
+          <h4 style="font-weight: 700; color: #1a1a1a; margin-bottom: 20px;">Hire KRAT for External Projects</h4>
+          <p style="color: #666; max-width: 800px; margin: 0 auto 30px; line-height: 1.8;">
+            KRAT services are available for external contracting. We support NGOs, INGOs, Research Firms, Government
+            Agencies, CSOs, Foundations, and Donors seeking credible, ethical, and timely field data across Nigeria.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="contact.html" class="ul-btn">
+              <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Request KRAT Services
+            </a>
+            <a href="mailto:kingscity.dev@gmail.com" class="ul-btn" style="background: #1a1a1a;">
+              <i class="flaticon-email"></i>
+              Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- KRAT MAIN CONTENT END -->
+
+    <!-- CTA SECTION START -->
+    <section class="ul-cta">
+      <div class="ul-container">
+        <span class="ul-section-sub-title">Join KRAT</span>
+        <h2 class="ul-cta-title">
+          Become Part of Nigeria's Leading Research Network
+        </h2>
+        <a href="contact.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+          Get Involved</a>
+      </div>
+      <img src="assets/img/cta-vector.svg" alt="Vector" class="ul-cta-vector" />
+    </section>
+    <!-- CTA SECTION END -->
+  </main>
+
+  <!-- FOOTER SECTION START -->
+  <footer class="ul-footer">
+    <div class="ul-footer-top">
+      <div class="ul-footer-container">
+        <div class="ul-footer-top-contact-infos">
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-pin"></i>
               </div>
             </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Address</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
+              </h5>
+            </div>
+          </div>
 
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-email"></i>
-                </div>
-              </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Send Email</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  <a href="mailto:kingscity.dev@gmail.com "
-                    >kingscity.dev@gmail.com
-                  </a>
-                </h5>
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-email"></i>
               </div>
             </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Send Email</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="mailto:kingscity.dev@gmail.com ">kingscity.dev@gmail.com
+                </a>
+              </h5>
+            </div>
+          </div>
 
-            <!-- single info -->
-            <div class="ul-footer-top-contact-info">
-              <!-- icon -->
-              <div class="ul-footer-top-contact-info-icon">
-                <div class="ul-footer-top-contact-info-icon-inner">
-                  <i class="flaticon-telephone-call-1"></i>
-                </div>
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-telephone-call-1"></i>
               </div>
-              <!-- txt -->
-              <div class="ul-footer-top-contact-info-txt">
-                <span class="ul-footer-top-contact-info-label">Contact Us</span>
-                <h5 class="ul-footer-top-contact-info-address">
-                  <a href="tel:+2349029940489">+234 902 994 0489</a>
-                </h5>
-              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Contact Us</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="tel:+2349029940489">+234 902 994 0489</a>
+              </h5>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="ul-footer-middle">
-        <div class="ul-footer-container">
-          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
-            <div class="ul-footer-about">
-              <a href="index.html" class="custom-logo white">
-                <img
-                  src="assets/img/logo-icon.jpeg"
-                  alt="KiiD logo"
-                  style="width: 80px; height: 80px"
-                />
-                <span
-                  class="logo-text"
-                  style="
+    <div class="ul-footer-middle">
+      <div class="ul-footer-container">
+        <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+          <div class="ul-footer-about">
+            <a href="index.html" class="custom-logo white">
+              <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+              <span class="logo-text" style="
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
                       'Trebuchet MS', sans-serif;
                     margin-left: -5px;
                     font-size: 32px;
                     color: #fff;
-                  "
-                  >KiiD</span
-                >
-              </a>
-              <p class="ul-footer-about-txt">
-                Kingscity Initiative for Integrated Development (KiiD) is
-                dedicated to building thriving communities through healthcare
-                access, environmental sustainability, and socio-economic
-                empowerment.
-              </p>
-              <div class="ul-footer-socials">
-                <a
-                  href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09"
-                  target="_blank"
-                  ><i class="flaticon-twitter"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw=="
-                  target="_blank"
-                  ><i class="flaticon-instagram"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Quick Links</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="about.html">About Us</a>
-                <a href="services.html">Our Programs</a>
-                <a href="krat.html">KRAT</a>
-                <a href="news.html">News & Events</a>
-                <a href="contact.html">Contact Us</a>
-              </div>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Our Impact</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="about.html#our-impact"
-                  >Over 1,000 people reached through health outreach</a
-                >
-                <a href="about.html#our-impact"
-                  >3,000+ youth educated on climate action</a
-                >
-                <a href="about.html#our-impact"
-                  >150+ individuals trained in market-relevant skills</a
-                >
-                <a href="about.html#our-impact"
-                  >5,000+ trees planted for environmental restoration</a
-                >
-              </div>
-            </div>
-
-            <div class="ul-footer-widget ul-nwsltr-widget">
-              <h3 class="ul-footer-widget-title">Get Involved</h3>
-              <div class="ul-footer-widget-links ul-footer-contact-links">
-                <a href="mailto:kingscity.dev@gmail.com "
-                  ><i class="flaticon-mail"></i> kingscity.dev@gmail.com
-                </a>
-                <a href="tel:+2349029940489"
-                  ><i class="flaticon-telephone-call"></i> +234 902 994 0489</a
-                >
-              </div>
-              <form class="ul-nwsltr-form">
-                <div class="top">
-                  <input
-                    type="email"
-                    name="email"
-                    id="nwsltr-email"
-                    placeholder="Your Email Address"
-                    class="ul-nwsltr-input"
-                    required
-                  />
-                  <button type="submit"><i class="flaticon-next"></i></button>
-                </div>
-
-                <div class="agreement">
-                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
-                    <input
-                      type="checkbox"
-                      name="agreement"
-                      id="nwsltr-agreement"
-                      required
-                    />
-                    <span class="ul-checkbox"
-                      ><i class="flaticon-tick"></i
-                    ></span>
-                    <span class="ul-checkbox-txt"
-                      >I agree with the
-                      <a href="privacy-policy.html">Privacy Policy</a></span
-                    >
-                  </label>
-                </div>
-              </form>
-            </div>
-
-            <div class="ul-footer-widget">
-              <h3 class="ul-footer-widget-title">Our Offices</h3>
-
-              <div class="ul-footer-widget-links">
-                <a href="contact.html">
-                  <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
-                  Benin City
-                </a>
-                <a href="contact.html">
-                  <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
-                </a>
-                <a href="contact.html">
-                  <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
-                </a>
-                <a href="tel:+2349029940489">+234 902 994 0489</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer bottom -->
-      <div class="ul-footer-bottom">
-        <div class="ul-footer-container">
-          <div class="ul-footer-bottom-wrapper">
-            <p class="copyright-txt">
-              &copy; <span id="footer-copyright-year"></span> Kingscity
-              Initiative for Integrated Development. All rights reserved
+                  ">KiiD</span>
+            </a>
+            <p class="ul-footer-about-txt">
+              Kingscity Initiative for Integrated Development (KiiD) is
+              dedicated to building thriving communities through healthcare
+              access, environmental sustainability, and socio-economic
+              empowerment.
             </p>
-            <div class="ul-footer-bottom-nav">
-              <a href="terms-and-conditions.html">Terms & Conditions</a>
-              <a href="privacy-policy.html">Privacy Policy</a>
+            <div class="ul-footer-socials">
+              <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                  class="flaticon-twitter"></i></a>
+              <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                  class="flaticon-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Our Programs</a>
+              <a href="krat.html">KRAT</a>
+              <a href="news.html">News & Events</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Impact</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html#our-impact">Over 1,000 people reached through health outreach</a>
+              <a href="about.html#our-impact">3,000+ youth educated on climate action</a>
+              <a href="about.html#our-impact">150+ individuals trained in market-relevant skills</a>
+              <a href="about.html#our-impact">5,000+ trees planted for environmental restoration</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget ul-nwsltr-widget">
+            <h3 class="ul-footer-widget-title">Get Involved</h3>
+            <div class="ul-footer-widget-links ul-footer-contact-links">
+              <a href="mailto:kingscity.dev@gmail.com "><i class="flaticon-mail"></i> kingscity.dev@gmail.com
+              </a>
+              <a href="tel:+2349029940489"><i class="flaticon-telephone-call"></i> +234 902 994 0489</a>
+            </div>
+            <form class="ul-nwsltr-form">
+              <div class="top">
+                <input type="email" name="email" id="nwsltr-email" placeholder="Your Email Address"
+                  class="ul-nwsltr-input" required />
+                <button type="submit"><i class="flaticon-next"></i></button>
+              </div>
+
+              <div class="agreement">
+                <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                  <input type="checkbox" name="agreement" id="nwsltr-agreement" required />
+                  <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
+                  <span class="ul-checkbox-txt">I agree with the
+                    <a href="privacy-policy.html">Privacy Policy</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Offices</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="contact.html">
+                <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                Benin City
+              </a>
+              <a href="contact.html">
+                <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+              </a>
+              <a href="contact.html">
+                <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+              </a>
+              <a href="tel:+2349029940489">+234 902 994 0489</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- vector -->
-      <div class="ul-footer-vectors">
-        <img
-          src="assets/img/footer-vector-img.png"
-          alt="Footer Image"
-          class="ul-footer-vector-1"
-        />
+    <!-- footer bottom -->
+    <div class="ul-footer-bottom">
+      <div class="ul-footer-container">
+        <div class="ul-footer-bottom-wrapper">
+          <p class="copyright-txt">
+            &copy; <span id="footer-copyright-year"></span> Kingscity
+            Initiative for Integrated Development. All rights reserved
+          </p>
+          <div class="ul-footer-bottom-nav">
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
       </div>
-    </footer>
-    <!-- FOOTER SECTION END -->
+    </div>
 
-    <!-- libraries JS -->
-    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/splide/splide.min.js"></script>
-    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
-    <script src="assets/vendor/animate-wow/wow.min.js"></script>
-    <script src="assets/vendor/splittype/index.min.js"></script>
-    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
-    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
-    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+    <!-- vector -->
+    <div class="ul-footer-vectors">
+      <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1" />
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
 
-    <!-- custom JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/tab.js"></script>
-    <script src="assets/js/accordion.js"></script>
-    <script src="assets/js/progressbar.js"></script>
-    <script src="assets/js/form-handler.js"></script>
-  </body>
+  <!-- libraries JS -->
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/splide/splide.min.js"></script>
+  <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+  <script src="assets/vendor/animate-wow/wow.min.js"></script>
+  <script src="assets/vendor/splittype/index.min.js"></script>
+  <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+  <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+  <!-- custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/form-handler.js"></script>
+</body>
+
 </html>
