@@ -72,7 +72,7 @@ async function handleNewsletterSubmit(e) {
 
   try {
     const response = await fetch(
-      "https://kiid-server.onrender.com/api/subscribe",
+      "https://kiid-server-nhes.onrender.com/api/subscribe",
       {
         method: "POST",
         headers: {
@@ -130,7 +130,7 @@ async function handleContactSubmit(e) {
 
   try {
     const response = await fetch(
-      "https://kiid-server.onrender.com/api/contact",
+      "https://kiid-server-nhes.onrender.com/api/contact",
       {
         method: "POST",
         headers: {
