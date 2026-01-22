@@ -4,14 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    Contact - Kingscity Initiative for Integrated Development (KiiD)
-  </title>
+  <title>Careers & Internships - Kingscity Initiative for Integrated Development (KiiD)</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="assets/img/favicon.jpeg" type="image/jpeg" />
 
-  <!-- libraries CSS -->
   <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
   <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
@@ -20,10 +16,221 @@
   <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
   <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-  <!-- custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom-logo.css" />
   <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+
+  <style>
+    .careers-intro {
+      background: #f8f9fa;
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+
+    .careers-section {
+      margin-bottom: 50px;
+    }
+
+    .careers-section h3 {
+      color: #1a1a1a;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border-left: 4px solid #ebbf10;
+      padding-left: 15px;
+    }
+
+    .careers-section h4 {
+      color: #333;
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .careers-section p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .careers-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .careers-section ul li {
+      padding: 10px 0 10px 30px;
+      position: relative;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .careers-section ul li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ebbf10;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .role-header {
+      background: linear-gradient(135deg, #ebbf10 0%, #d4a50a 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .role-header h2 {
+      color: white;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .role-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .role-detail-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .role-detail-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .role-detail-item span {
+      font-size: 16px;
+    }
+
+    .google-form-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      margin: 40px 0;
+    }
+
+    .google-form-container h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+    }
+
+    .google-form-iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ebbf10;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 20px 0;
+    }
+
+    .download-btn:hover {
+      background: #d4a50a;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(235, 191, 16, 0.3);
+    }
+
+    .download-btn i {
+      font-size: 20px;
+    }
+
+    .deadline-notice {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .deadline-notice h4 {
+      color: #856404;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .deadline-notice p {
+      color: #856404;
+      margin: 0;
+    }
+
+    .equal-opportunity {
+      background: #e7f3ff;
+      border-left: 4px solid #0066cc;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .equal-opportunity p {
+      margin: 5px 0;
+      color: #004085;
+    }
+
+    .note-box {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .note-box strong {
+      color: #155724;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .note-box p {
+      color: #155724;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .google-form-iframe {
+        height: 1500px;
+      }
+
+      .role-header h2 {
+        font-size: 24px;
+      }
+
+      .careers-section h3 {
+        font-size: 22px;
+      }
+
+      .google-form-container {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -31,9 +238,7 @@
     <div class="loader"></div>
   </div>
 
-  <!-- SIDEBAR SECTION START -->
   <div class="ul-sidebar">
-    <!-- header -->
     <div class="ul-sidebar-header">
       <div class="ul-sidebar-header-logo">
         <a href="index.html" class="custom-logo">
@@ -46,7 +251,6 @@
               ">KiiD</span>
         </a>
       </div>
-      <!-- sidebar closer -->
       <button class="ul-sidebar-closer">
         <i class="flaticon-close"></i>
       </button>
@@ -54,7 +258,6 @@
 
     <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
 
-    <!-- sidebar footer -->
     <div class="ul-sidebar-footer">
       <span class="ul-sidebar-footer-title">Contact Us</span>
 
@@ -71,9 +274,7 @@
       </div>
     </div>
   </div>
-  <!-- SIDEBAR SECTION END -->
 
-  <!-- SEARCH MODAL SECTION START -->
   <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
     <button class="ul-search-closer"><i class="flaticon-close"></i></button>
 
@@ -86,9 +287,7 @@
       </div>
     </form>
   </div>
-  <!-- SEARCH MODAL SECTION END -->
 
-  <!-- HEADER SECTION START -->
   <header class="ul-header">
     <div class="ul-header-bottom to-be-sticky">
       <div class="ul-header-bottom-wrapper ul-header-container">
@@ -105,7 +304,6 @@
           </a>
         </div>
 
-        <!-- header nav -->
         <div class="ul-header-nav-wrapper">
           <div class="to-go-to-sidebar-in-mobile">
             <nav class="ul-header-nav">
@@ -171,7 +369,6 @@
           </div>
         </div>
 
-        <!-- actions -->
         <div class="ul-header-actions">
           <button class="ul-header-search-opener">
             <i class="flaticon-search"></i>
@@ -187,126 +384,207 @@
       </div>
     </div>
   </header>
-  <!-- HEADER SECTION END -->
 
   <main>
-    <!-- BREADCRUMBS SECTION START -->
     <section class="ul-breadcrumb ul-section-spacing">
       <div class="ul-container">
-        <h2 class="ul-breadcrumb-title">Contact us</h2>
+        <h2 class="ul-breadcrumb-title">Careers & Internships</h2>
         <ul class="ul-breadcrumb-nav">
           <li><a href="index.html">Home</a></li>
           <li>
             <span class="separator"><i class="flaticon-right"></i></span>
           </li>
-          <li>Contact us</li>
+          <li>Partner With Us</li>
+          <li>
+            <span class="separator"><i class="flaticon-right"></i></span>
+          </li>
+          <li>Careers & Internships</li>
         </ul>
       </div>
     </section>
-    <!-- BREADCRUMBS SECTION END -->
 
-    <!-- CONTACT INFOS SECTION START -->
-    <div class="ul-contact-infos">
-      <div class="ul-section-spacing ul-container">
-        <div class="row row-cols-md-3 row-cols-2 row-cols-xxs-1 ul-bs-row">
-          <!-- single info -->
-          <div class="col">
-            <div class="ul-contact-info">
-              <div class="icon"><i class="flaticon-phone-call"></i></div>
-              <div class="txt">
-                <span class="title">Phone number</span>
-                <a href="tel:+2349029940489">+234 902 994 0489</a>
-              </div>
-            </div>
-          </div>
-          <!-- single info -->
-          <div class="col">
-            <div class="ul-contact-info">
-              <div class="icon"><i class="flaticon-comment"></i></div>
-              <div class="txt">
-                <span class="title">Email address</span>
-                <a href="mailto:info@kiid.africa ">info@kiid.africa
-                </a>
-                <br />
-                <a href="mailto:dev@kiid.org">dev@kiid.org</a>
-              </div>
-            </div>
-          </div>
-          <!-- single info -->
-          <div class="col">
-            <div class="ul-contact-info">
-              <div class="icon"><i class="flaticon-location"></i></div>
-              <div class="txt">
-                <span class="title">Head Office</span>
-
-                <span class="descr">No 2 Ogbeide Ihama Avenue, GRA, Benin City</span>
-                <hr />
-                <span class="descr">Abuja: Behind Odogwu Palace Hotel, Wumba, Apo</span>
-                <hr />
-                <span class="descr">Enugu: No 87 Ogurugu Road, Nsukka</span>
-              </div>
-            </div>
-          </div>
+    <section class="careers-intro">
+      <div class="ul-container">
+        <div class="wow animate__fadeInUp">
+          <h2 class="ul-section-title text-center mb-4">Join Our Team</h2>
+          <p class="ul-section-descr text-center" style="max-width: 800px; margin: 0 auto;">
+            Kingscity Initiative for Integrated Development (KIID) offers opportunities for research, internships, and
+            community development roles. We are committed to empowering individuals who are passionate about making a
+            difference in healthcare access, climate awareness, socio-economic empowerment, and community development.
+            Join us in building thriving communities across Nigeria.
+          </p>
         </div>
-      </div>
-    </div>
-    <!-- CONTACT INFOS SECTION END -->
-
-    <!-- MAPS SECTION START -->
-    <div class="ul-contact-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d302.4537034905103!2d8.675233135549295!3d9.081832601354485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105162a6bdc03921%3A0xbcc55c0bf3084c85!2sOdogwu%20Palace%20Hotel%2C%20Apo%20Wumba%20Abuja.!5e1!3m2!1sen!2sng!4v1746505050964!5m2!1sen!2sng"
-        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- MAPS SECTION END -->
-
-    <!-- CONTACT SECTION START -->
-    <section class="ul-inner-contact ul-section-spacing">
-      <div class="ul-section-heading justify-content-center text-center">
-        <div>
-          <span class="ul-section-sub-title">Contact us</span>
-          <h2 class="ul-section-title">Feel Free To Write Us Anytime</h2>
-        </div>
-      </div>
-
-      <div class="ul-inner-contact-container">
-        <form class="ul-contact-form ul-form">
-          <div class="row row-cols-2 row-cols-xxs-1 ul-bs-row">
-            <div class="col">
-              <div class="form-group">
-                <input type="text" name="name" id="ul-contact-name" placeholder="Your Name" required />
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-group">
-                <input type="email" name="email" id="ul-contact-email" placeholder="Email Address" required />
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-group">
-                <input type="text" name="subject" id="ul-contact-subject" placeholder="Subject" required />
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-group">
-                <textarea name="message" id="ul-contact-msg" placeholder="Type your message" required></textarea>
-              </div>
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="ul-btn">
-                <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
-                Get in Touch
-              </button>
-            </div>
-          </div>
-        </form>
       </div>
     </section>
-    <!-- CONTACT SECTION END -->
+
+    <section class="ul-section-spacing">
+      <div class="ul-container">
+        <div class="role-header wow animate__fadeInUp">
+          <h2>Call for Applications: KIID Research and Assessment Team (KRAT)</h2>
+          <p style="font-size: 18px; margin-bottom: 20px;">
+            Join our dynamic team of researchers and field professionals dedicated to evidence-based community
+            development across Nigeria.
+          </p>
+          <div class="role-details">
+            <div class="role-detail-item">
+              <strong>Organization</strong>
+              <span>Kingscity Initiative for Integrated Development (KIID)</span>
+            </div>
+            <div class="role-detail-item">
+              <strong>Position</strong>
+              <span>Research & Assessment Team Members</span>
+            </div>
+            <div class="role-detail-item">
+              <strong>Level</strong>
+              <span>Entry to Mid-Level</span>
+            </div>
+            <div class="role-detail-item">
+              <strong>Unit</strong>
+              <span>Research and Assessment Team (KRAT)</span>
+            </div>
+            <div class="role-detail-item">
+              <strong>Location</strong>
+              <span>Field-based (All States in Nigeria, including FCT)</span>
+            </div>
+            <div class="role-detail-item">
+              <strong>Start Date</strong>
+              <span>As soon as possible</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp">
+          <h3>About KIID</h3>
+          <p>
+            Kingscity Initiative for Integrated Development (KIID) is a community-driven organization committed to
+            creating sustainable change through evidence-based interventions. Our work focuses on:
+          </p>
+          <ul>
+            <li>Healthcare access and health advocacy for underserved populations</li>
+            <li>Climate awareness and environmental sustainability initiatives</li>
+            <li>Socio-economic empowerment programs for women, youth, and vulnerable groups</li>
+            <li>Community development and capacity building</li>
+            <li>Research, monitoring, evaluation, learning, and accountability (MEAL)</li>
+          </ul>
+          <p>
+            We work directly with women, youth, and vulnerable groups to ensure that our programs are responsive to
+            community needs and grounded in solid research and data.
+          </p>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp">
+          <h3>Role Description & Objectives</h3>
+          <p>
+            The KIID Research and Assessment Team (KRAT) is the backbone of our evidence-based approach to community
+            development. Team members support critical research activities, policy briefs, monitoring and evaluation,
+            learning, and accountability across all our programs.
+          </p>
+          <p>
+            This opportunity is open to both experienced professionals and beginners, including students, NYSC corps
+            members, and unemployed youths who are eager to learn and contribute to meaningful community work.
+          </p>
+          <p>
+            As a KRAT member, you will gain hands-on experience in field research, data collection, community
+            engagement, and monitoring and evaluation—skills that are highly valued in the development sector.
+          </p>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp">
+          <h3>Key Responsibilities</h3>
+          <p>As a member of the KRAT team, your responsibilities will include:</p>
+          <ul>
+            <li>Conducting field data collection through surveys, interviews, focus group discussions, and community
+              assessments</li>
+            <li>Supporting baseline, midline, and endline studies for KIID programs and projects</li>
+            <li>Participating in monitoring, evaluation, and learning (MEL) activities</li>
+            <li>Recording and verifying data using both paper-based and digital tools (e.g., KoboToolbox, ODK)</li>
+            <li>Engaging with community members in a respectful, ethical, and culturally sensitive manner</li>
+            <li>Assisting with data cleaning, entry, and preliminary analysis</li>
+            <li>Contributing to report writing and data visualization as needed</li>
+            <li>Attending training sessions, debriefings, and learning sessions</li>
+            <li>Representing KIID professionally in the field and maintaining confidentiality of all data collected</li>
+            <li>Collaborating with team members and supervisors to ensure quality data collection</li>
+          </ul>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp">
+          <h3>Required Qualifications & Competencies</h3>
+
+          <h4>Essential Requirements</h4>
+          <ul>
+            <li>Minimum of SSCE (Senior Secondary Certificate Examination) or equivalent</li>
+            <li>Strong interest in research, data collection, or community development</li>
+            <li>Willingness to learn and develop new skills</li>
+            <li>Good communication and interpersonal skills</li>
+            <li>Ability to work effectively in diverse community settings</li>
+            <li>Availability for short-term fieldwork assignments and willingness to travel within Nigeria</li>
+            <li>Integrity, reliability, and commitment to ethical research practices</li>
+          </ul>
+
+          <h4>Desirable (Not Mandatory)</h4>
+          <ul>
+            <li>Prior experience in research, data collection, or monitoring and evaluation</li>
+            <li>Educational background in social sciences, public health, statistics, or related fields</li>
+            <li>Familiarity with digital data collection tools such as KoboToolbox or ODK Collect</li>
+            <li>Ability to speak local languages in addition to English</li>
+            <li>Basic computer or smartphone literacy</li>
+            <li>Experience working with NGOs, community-based organizations, or development projects</li>
+          </ul>
+
+          <div class="note-box">
+            <strong>Important Note:</strong>
+            <p>
+              Lack of prior experience is not a barrier to application. KIID is committed to building capacity and will
+              provide comprehensive training to all selected team members. We encourage students, NYSC corps members,
+              and unemployed youths to apply.
+            </p>
+          </div>
+        </div>
+
+        <div class="deadline-notice wow animate__fadeInUp">
+          <h4><i class="flaticon-calendar"></i> Application Deadline</h4>
+          <p><strong>20 February 2026</strong></p>
+          <p>Applications received after this date may not be considered. Apply early to ensure your application is
+            reviewed.</p>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp text-center">
+          <h3>Download Vacancy Details</h3>
+          <p>For complete information about this opportunity, download the full vacancy announcement.</p>
+          <a href="assets/doc/KIID Vacancy.pdf" class="download-btn" download>
+            <i class="flaticon-download"></i>
+            Download Vacancy Details (PDF)
+          </a>
+        </div>
+
+        <div class="careers-section wow animate__fadeInUp text-center">
+          <h3>Apply Now</h3>
+          <p style="margin-bottom: 30px; color: #555; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Ready to join the KIID Research and Assessment Team? Click the button below to complete your application.
+            The form will open in a new tab.
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2C5sUeTKIUx1GP8uld2bd9M7Tu7AYEdpynfBQ7MLRsz5org/viewform" 
+             class="download-btn" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <i class="flaticon-edit"></i>
+            Complete Application Form
+          </a>
+        </div>
+
+        <div class="equal-opportunity wow animate__fadeInUp">
+          <h4 style="color: #004085; margin-bottom: 15px;">Equal Opportunity & Transparency</h4>
+          <p><strong>KIID is an equal opportunity organization.</strong> We welcome applications from all qualified
+            individuals regardless of gender, ethnicity, religion, or disability status.</p>
+          <p><strong>No recruitment fee is charged.</strong> KIID does not require any payment at any stage of the
+            recruitment process. Beware of fraudulent requests.</p>
+          <p><strong>Learn more:</strong> Visit our website at <a href="https://kiid.africa/"
+              target="_blank">https://kiid.africa/</a> to learn more about our work and impact.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER SECTION START -->
   <footer class="ul-footer">
     <div class="ul-footer-top">
       <div class="ul-footer-container">
@@ -323,7 +601,7 @@
             <div class="ul-footer-top-contact-info-txt">
               <span class="ul-footer-top-contact-info-label">Address</span>
               <h5 class="ul-footer-top-contact-info-address">
-                Edo State: No 2 Ogbeide Ihama Avenue, GRA, Benin City
+                Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
               </h5>
             </div>
           </div>
@@ -342,7 +620,6 @@
               <h5 class="ul-footer-top-contact-info-address">
                 <a href="mailto:info@kiid.africa ">info@kiid.africa
                 </a>
-                <a href="mailto:dev@gmail.com">dev@gmail.com</a>
               </h5>
             </div>
           </div>
@@ -417,31 +694,6 @@
             </div>
           </div>
 
-          <div class="ul-footer-widget ul-nwsltr-widget">
-            <h3 class="ul-footer-widget-title">Get Involved</h3>
-            <div class="ul-footer-widget-links ul-footer-contact-links">
-              <a href="mailto:info@kiid.africa "><i class="flaticon-mail"></i> info@kiid.africa
-              </a>
-              <a href="tel:+2349029940489"><i class="flaticon-telephone-call"></i> +234 902 994 0489</a>
-            </div>
-            <form class="ul-nwsltr-form">
-              <div class="top">
-                <input type="email" name="email" id="nwsltr-email" placeholder="Your Email Address"
-                  class="ul-nwsltr-input" required />
-                <button type="submit"><i class="flaticon-next"></i></button>
-              </div>
-
-              <div class="agreement">
-                <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
-                  <input type="checkbox" name="agreement" id="nwsltr-agreement" required />
-                  <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
-                  <span class="ul-checkbox-txt">I agree with the
-                    <a href="privacy-policy.html">Privacy Policy</a></span>
-                </label>
-              </div>
-            </form>
-          </div>
-
           <div class="ul-footer-widget">
             <h3 class="ul-footer-widget-title">Our Offices</h3>
 
@@ -463,13 +715,14 @@
       </div>
     </div>
 
-    <!-- footer bottom -->
     <div class="ul-footer-bottom">
       <div class="ul-footer-container">
         <div class="ul-footer-bottom-wrapper">
           <p class="copyright-txt">
-            &copy; <span id="footer-copyright-year"></span> Kingscity
-            Initiative for Integrated Development. All rights reserved
+            &copy;
+            <span id="footer-copyright-year"></span>
+            Kingscity Initiative for Integrated Development. All rights
+            reserved
           </p>
           <div class="ul-footer-bottom-nav">
             <a href="terms-and-conditions.html">Terms & Conditions</a>
@@ -479,14 +732,11 @@
       </div>
     </div>
 
-    <!-- vector -->
     <div class="ul-footer-vectors">
       <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1" />
     </div>
   </footer>
-  <!-- FOOTER SECTION END -->
 
-  <!-- libraries JS -->
   <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/splide/splide.min.js"></script>
   <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
@@ -498,12 +748,15 @@
   <script src="assets/vendor/fslightbox/fslightbox.js"></script>
   <script src="assets/vendor/flatpickr/flatpickr.js"></script>
 
-  <!-- custom JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tab.js"></script>
   <script src="assets/js/accordion.js"></script>
   <script src="assets/js/progressbar.js"></script>
   <script src="assets/js/form-handler.js"></script>
+
+  <script>
+    document.getElementById('footer-copyright-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
