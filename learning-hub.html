@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    KIID Africa Learning Hub | Kingscity Initiative for Integrated Development (KiiD)
+  </title>
+  <meta name="description"
+    content="The KIID Africa Learning Hub is a 12-week professional capacity-building programme for development practitioners, with competency-based learning, weekly mentorship, portfolio development and optional certification." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/jpeg" />
+
+  <!-- libraries CSS -->
+  <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+  <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+  <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom-logo.css" />
+  <link rel="stylesheet" href="assets/css/loading-indicator.css" />
+  <link rel="stylesheet" href="assets/css/learning-hub.css" />
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- SIDEBAR SECTION START -->
+  <div class="ul-sidebar">
+    <!-- header -->
+    <div class="ul-sidebar-header">
+      <div class="ul-sidebar-header-logo">
+        <a href="index.html" class="custom-logo">
+          <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+          <span class="logo-text" style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+                margin-left: -5px;
+                font-size: 32px;
+              ">KiiD</span>
+        </a>
+      </div>
+      <!-- sidebar closer -->
+      <button class="ul-sidebar-closer">
+        <i class="flaticon-close"></i>
+      </button>
+    </div>
+
+    <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+    <!-- sidebar footer -->
+    <div class="ul-sidebar-footer">
+      <span class="ul-sidebar-footer-title">Contact Us</span>
+
+      <div class="ul-sidebar-footer-info">
+        <p>+234 902 994 0489</p>
+        <p>info@kiid.africa</p>
+      </div>
+
+      <div class="ul-sidebar-footer-social">
+        <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+            class="flaticon-twitter"></i></a>
+        <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+            class="flaticon-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- SIDEBAR SECTION END -->
+
+  <!-- SEARCH MODAL SECTION START -->
+  <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+    <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+    <form action="learning-hub.html#" class="ul-search-form">
+      <div class="ul-search-form-right">
+        <input type="search" name="search" id="ul-search" placeholder="Search Here" />
+        <button type="submit">
+          <span class="icon"><i class="flaticon-search"></i></span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- SEARCH MODAL SECTION END -->
+
+  <!-- HEADER SECTION START -->
+  <header class="ul-header">
+    <div class="ul-header-bottom to-be-sticky">
+      <div class="ul-header-bottom-wrapper ul-header-container">
+        <div class="logo-container">
+          <a href="index.html" class="d-inline-block custom-logo" style="margin-top: 10px">
+            <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+            <span class="logo-text" style="
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                  margin-left: -5px;
+                  font-size: 32px;
+                  color: #ebbf10;
+                ">KiiD</span>
+          </a>
+        </div>
+
+        <!-- header nav -->
+        <div class="ul-header-nav-wrapper">
+          <div class="to-go-to-sidebar-in-mobile">
+            <nav class="ul-header-nav">
+              <a href="index.html">Home</a>
+
+              <div class="has-sub-menu">
+                <a role="button">About Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+                    <li><a href="about.html#approach">Our Approach</a></li>
+                    <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Our Programs</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="services.html#health">Health Advocacy & Outreach</a></li>
+                    <li><a href="services.html#environment">Environmental & Climate Action</a></li>
+                    <li><a href="services.html#empowerment">Socio-Economic Empowerment</a></li>
+                    <li><a href="services.html#protection">Protection & MHPSS</a></li>
+                    <li><a href="services.html#capacity">Capacity Building & Consulting</a></li>
+                    <li><a href="services.html#research">Research & Evaluation</a></li>
+                    <li><a href="services.html#education">Education & Learning Support</a></li>
+                    <li><a href="services.html#agriculture">Agriculture & Food Security</a></li>
+                    <li><a href="services.html#peace">Peace & Conflict Resolution</a></li>
+                    <li><a href="services.html#community">Community Development</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="krat.html">KRAT</a>
+
+              <a href="learning-hub.html" class="active">
+                Learning Hub
+                <span class="ul-beta-badge ul-beta-badge--nav" data-tooltip="Enrollments are currently physical, online enrollment will open when our online learning platform launches.">Beta</span>
+              </a>
+
+              <div class="has-sub-menu">
+                <a role="button">Partner With Us</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="donations.html">Volunteer</a></li>
+                    <li><a href="donations.html">Donate</a></li>
+                    <li><a href="careers.html">Careers & Internships</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="has-sub-menu">
+                <a role="button">Resources</a>
+                <div class="ul-header-submenu">
+                  <ul>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="news.html">Stories & Publications</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- actions -->
+        <div class="ul-header-actions">
+          <button class="ul-header-search-opener">
+            <i class="flaticon-search"></i>
+          </button>
+          <a href="contact.html" class="ul-btn d-sm-inline-flex d-none">
+            <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Get Involved
+          </a>
+          <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+            <i class="flaticon-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER SECTION END -->
+
+  <main>
+    <!-- BREADCRUMBS SECTION START -->
+    <section class="ul-breadcrumb ul-section-spacing">
+      <div class="ul-container">
+        <h2 class="ul-breadcrumb-title">KIID Africa Learning Hub</h2>
+        <ul class="ul-breadcrumb-nav">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <span class="separator"><i class="flaticon-right"></i></span>
+          </li>
+          <li>Learning Hub</li>
+        </ul>
+      </div>
+    </section>
+    <!-- BREADCRUMBS SECTION END -->
+
+    <!-- LEARNING HUB HERO SECTION START -->
+    <section class="ul-lh-hero ul-section-spacing pt-0">
+      <div class="ul-container">
+        <span class="ul-lh-hero-tag">
+          <i class="flaticon-quotation"></i> KIID Africa Learning Hub
+        </span>
+        <h1 class="ul-lh-hero-title">Building the Next Generation of Development Professionals</h1>
+        <p class="ul-lh-hero-descr">
+          A 12-week professional capacity-building programme that equips development
+          practitioners with practical skills in MEAL, project management, research,
+          and data analytics &mdash; through competency-based learning, weekly mentorship,
+          and real-world portfolio development.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <button type="button" class="ul-enroll-btn" disabled
+            data-tooltip="Enrollments are currently physical, online enrollment will open when our online learning platform launches.">
+            <span class="ul-enroll-btn-pulse"></span>
+            <span class="ul-enroll-btn-icon"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i></span>
+            Enroll Now
+            <span class="ul-beta-badge" data-tooltip="Enrollments are currently physical, online enrollment will open when our online learning platform launches.">Beta</span>
+          </button>
+          <a href="#programme-structure" class="ul-btn ul-btn--2" style="background: #fff; color: var(--ul-primary);">
+            <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+            Explore the Programme
+          </a>
+        </div>
+        <div class="ul-lh-hero-stats">
+          <div class="ul-lh-hero-stat">
+            <span class="num">12</span>
+            <span class="lbl">Week Programme</span>
+          </div>
+          <div class="ul-lh-hero-stat">
+            <span class="num">6</span>
+            <span class="lbl">Learning Phases</span>
+          </div>
+          <div class="ul-lh-hero-stat">
+            <span class="num">2</span>
+            <span class="lbl">Learning Tracks</span>
+          </div>
+          <div class="ul-lh-hero-stat">
+            <span class="num">3</span>
+            <span class="lbl">Live Sessions / Week</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LEARNING HUB HERO SECTION END -->
+
+    <!-- ABOUT THE PROGRAMME SECTION START -->
+    <section class="ul-section-spacing pt-0">
+      <div class="ul-container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-6 wow animate__fadeInLeft">
+            <span class="ul-section-sub-title">About the Programme</span>
+            <h2 class="ul-section-title">A Professional Learning Experience for Development Practitioners</h2>
+            <p class="ul-section-descr">
+              The KIID Africa Learning Hub is the capacity-building arm of Kingscity Initiative
+              for Integrated Development (KIID). It delivers a structured, competency-based
+              professional programme designed to strengthen the skills of development
+              practitioners, NGO staff, researchers, M&E officers, project coordinators, and
+              emerging professionals working across the humanitarian and development sector.
+            </p>
+            <p class="ul-section-descr mt-3">
+              The programme bridges the gap between theory and practice. Rather than purely
+              academic learning, participants engage with real-world case studies, hands-on
+              assignments, and live mentorship &mdash; building a portfolio of work they can
+              apply directly in their organisations and careers.
+            </p>
+          </div>
+          <div class="col-lg-6 wow animate__fadeInRight">
+            <div class="ul-lh-approach">
+              <h3 style="font-family: var(--font-quicksand); font-weight: 700; color: var(--ul-black); margin-bottom: 12px;">
+                Who This Programme Is For
+              </h3>
+              <p style="color: var(--ul-p); margin-bottom: 0;">
+                The Learning Hub is designed for anyone committed to building a career in
+                development &mdash; from beginners exploring the sector to professionals seeking
+                to sharpen their technical edge.
+              </p>
+              <div class="ul-lh-approch-pillars">
+                <div class="ul-lh-pillar">
+                  <div class="ul-lh-pillar-num">1</div>
+                  <div>
+                    <h5>Beginner Track</h5>
+                    <p>For newcomers, NYSC members, and recent graduates entering the development sector.</p>
+                  </div>
+                </div>
+                <div class="ul-lh-pillar">
+                  <div class="ul-lh-pillar-num">2</div>
+                  <div>
+                    <h5>Professional Track</h5>
+                    <p>For NGO staff, M&E officers, project managers, and researchers refining their practice.</p>
+                  </div>
+                </div>
+                <div class="ul-lh-pillar">
+                  <div class="ul-lh-pillar-num">3</div>
+                  <div>
+                    <h5>Career Switchers</h5>
+                    <p>For professionals from other fields transitioning into development and humanitarian work.</p>
+                  </div>
+                </div>
+                <div class="ul-lh-pillar">
+                  <div class="ul-lh-pillar-num">4</div>
+                  <div>
+                    <h5>Organisations</h5>
+                    <p>For NGOs and CSOs seeking to upskill their teams in MEAL, research, and project management.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT THE PROGRAMME SECTION END -->
+
+    <!-- LEARNING APPROACH SECTION START -->
+    <section class="ul-section-spacing pt-0" style="background: #fff9f4;">
+      <div class="ul-container">
+        <div class="ul-section-heading text-center">
+          <div>
+            <span class="ul-section-sub-title">Our Learning Approach</span>
+            <h2 class="ul-section-title">Learn by Doing, Not Just by Watching</h2>
+          </div>
+        </div>
+        <p class="ul-lh-section-intro ul-section-descr">
+          The Learning Hub follows a competency-based model. Every week combines structured
+          learning, practical application, and live mentorship &mdash; so participants build
+          real skills, not just theoretical knowledge.
+        </p>
+        <div class="ul-lh-highlights">
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-double-quotes"></i></div>
+            <h4>Structured Learning</h4>
+            <p>Curated lessons, reading resources, and frameworks delivered weekly through a clear learning path.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-check"></i></div>
+            <h4>Practical Application</h4>
+            <p>Every concept is reinforced through hands-on assignments that mirror real development work.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-team"></i></div>
+            <h4>Live Mentorship</h4>
+            <p>Weekly review and Q&amp;A sessions with experienced practitioners who guide your progress.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-package"></i></div>
+            <h4>Portfolio Building</h4>
+            <p>Participants complete a portfolio of work products they can present to employers and partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LEARNING APPROACH SECTION END -->
+
+    <!-- PROGRAMME HIGHLIGHTS SECTION START -->
+    <section class="ul-section-spacing">
+      <div class="ul-container">
+        <div class="ul-section-heading text-center">
+          <div>
+            <span class="ul-section-sub-title">Programme Highlights</span>
+            <h2 class="ul-section-title">What Makes the Learning Hub Different</h2>
+          </div>
+        </div>
+        <div class="ul-lh-highlights">
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-calendar"></i></div>
+            <h4>12-Week Professional Programme</h4>
+            <p>A focused, structured curriculum that takes you from foundations to advanced practice.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-star"></i></div>
+            <h4>Competency-Based Learning</h4>
+            <p>Skill-driven, not just content-driven &mdash; you demonstrate what you can do, not just what you know.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-check"></i></div>
+            <h4>Weekly Assignments</h4>
+            <p>Consistent practice that builds mastery and produces tangible work products every week.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-team"></i></div>
+            <h4>Live Mentorship Sessions</h4>
+            <p>Direct access to experienced practitioners for feedback, guidance, and career support.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-package"></i></div>
+            <h4>Portfolio Development</h4>
+            <p>Leave the programme with a professional portfolio you can showcase to employers and partners.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-checked"></i></div>
+            <h4>Phase Assessments</h4>
+            <p>Structured assessments at the end of each phase to confirm your competence and progress.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-check-mark"></i></div>
+            <h4>Optional Certification</h4>
+            <p>Earn a KIID Africa Learning Hub certificate of completion upon meeting programme requirements.</p>
+          </div>
+          <div class="ul-lh-highlight-card wow animate__fadeInUp">
+            <div class="ul-lh-highlight-card-icon"><i class="flaticon-relationship"></i></div>
+            <h4>Beginner &amp; Professional Tracks</h4>
+            <p>Two tracks designed to meet you at your level &mdash; whether you're starting out or levelling up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROGRAMME HIGHLIGHTS SECTION END -->
+
+    <!-- PROGRAMME STRUCTURE SECTION START -->
+    <section class="ul-section-spacing pt-0" id="programme-structure" style="background: #fff9f4;">
+      <div class="ul-container">
+        <div class="ul-section-heading text-center">
+          <div>
+            <span class="ul-section-sub-title">Programme Structure</span>
+            <h2 class="ul-section-title">Six Phases, Twelve Weeks</h2>
+          </div>
+        </div>
+        <p class="ul-lh-section-intro ul-section-descr">
+          The programme is organised into six progressive phases. Each phase builds on the last,
+          moving from foundations to advanced practice and culminating in a portfolio and
+          capstone review.
+        </p>
+
+        <div class="ul-lh-phases">
+          <!-- Phase 1 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">1</div>
+              <span class="ul-lh-phase-weeks">Weeks 1&ndash;2</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>Foundations of Development Practice</h4>
+              <p>
+                Build a shared understanding of the development sector, key actors, frameworks,
+                and the principles that guide responsible, ethical practice.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Development sector mapping</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Core principles &amp; ethics</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Stakeholder ecosystems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">2</div>
+              <span class="ul-lh-phase-weeks">Weeks 3&ndash;4</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>Project Management for Development</h4>
+              <p>
+                Learn the full project cycle &mdash; from needs assessment and design to
+                implementation, monitoring, and closure &mdash; using sector-standard tools.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Project cycle management</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Logframes &amp; budgets</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Work planning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">3</div>
+              <span class="ul-lh-phase-weeks">Weeks 5&ndash;6</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>MEAL &mdash; Monitoring, Evaluation, Accountability &amp; Learning</h4>
+              <p>
+                Master the foundations of MEAL: indicators, data collection methods,
+                accountability mechanisms, and how learning drives programme improvement.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> MEAL frameworks</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Indicator design</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Accountability mechanisms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">4</div>
+              <span class="ul-lh-phase-weeks">Weeks 7&ndash;8</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>Research &amp; Data Collection</h4>
+              <p>
+                Develop practical research skills &mdash; qualitative and quantitative methods,
+                tool design, fieldwork ethics, and data quality assurance.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Research design</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Data collection tools</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Fieldwork ethics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">5</div>
+              <span class="ul-lh-phase-weeks">Weeks 9&ndash;10</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>Data Analytics &amp; Visualisation</h4>
+              <p>
+                Turn raw data into insight. Learn to clean, analyse, and visualise data using
+                accessible tools, and communicate findings for decision-making.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Data cleaning</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Analysis &amp; visualisation</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Reporting for decisions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 6 -->
+          <div class="ul-lh-phase wow animate__fadeInUp">
+            <div class="ul-lh-phase-marker">
+              <div class="ul-lh-phase-num">6</div>
+              <span class="ul-lh-phase-weeks">Weeks 11&ndash;12</span>
+            </div>
+            <div class="ul-lh-phase-body">
+              <h4>Portfolio, Capstone &amp; Career Pathways</h4>
+              <p>
+                Consolidate your learning into a professional portfolio, complete a capstone
+                review, and map your next steps in the development sector.
+              </p>
+              <div class="ul-lh-phase-outcomes">
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Portfolio finalisation</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Capstone review</span>
+                <span class="ul-lh-phase-outcome"><i class="flaticon-tick"></i> Career pathway planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROGRAMME STRUCTURE SECTION END -->
+
+    <!-- WEEKLY LEARNING SCHEDULE SECTION START -->
+    <section class="ul-section-spacing">
+      <div class="ul-container">
+        <div class="ul-section-heading text-center">
+          <div>
+            <span class="ul-section-sub-title">Weekly Learning Schedule</span>
+            <h2 class="ul-section-title">A Rhythm That Builds Mastery</h2>
+          </div>
+        </div>
+        <p class="ul-lh-section-intro ul-section-descr">
+          Each week follows a consistent three-day rhythm &mdash; learning, practice, and review
+          &mdash; designed to fit alongside work and study.
+        </p>
+
+        <div class="ul-lh-schedule">
+          <div class="ul-lh-day wow animate__fadeInUp">
+            <div class="ul-lh-day-head">
+              <div class="day">Monday</div>
+              <div class="sub">Learn</div>
+            </div>
+            <div class="ul-lh-day-body">
+              <ul>
+                <li><i class="flaticon-double-quotes"></i> Weekly lessons released</li>
+                <li><i class="flaticon-quotation"></i> Curated learning resources</li>
+                <li><i class="flaticon-check"></i> Reading &amp; reflection prompts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ul-lh-day wow animate__fadeInUp">
+            <div class="ul-lh-day-head">
+              <div class="day">Wednesday</div>
+              <div class="sub">Practice</div>
+            </div>
+            <div class="ul-lh-day-body">
+              <ul>
+                <li><i class="flaticon-check"></i> Practical assignments released</li>
+                <li><i class="flaticon-star"></i> Hands-on application tasks</li>
+                <li><i class="flaticon-checked"></i> Submission of weekly deliverables</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ul-lh-day wow animate__fadeInUp">
+            <div class="ul-lh-day-head">
+              <div class="day">Friday</div>
+              <div class="sub">Review &amp; Mentor</div>
+            </div>
+            <div class="ul-lh-day-body">
+              <ul>
+                <li><i class="flaticon-team"></i> Live review session</li>
+                <li><i class="flaticon-comment"></i> Open Q&amp;A with mentors</li>
+                <li><i class="flaticon-relationship"></i> Personalised mentorship &amp; feedback</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- WEEKLY LEARNING SCHEDULE SECTION END -->
+
+    <!-- EXPECTED OUTCOMES SECTION START -->
+    <section class="ul-section-spacing pt-0" style="background: #fff9f4;">
+      <div class="ul-container">
+        <div class="ul-section-heading text-center">
+          <div>
+            <span class="ul-section-sub-title">Expected Outcomes</span>
+            <h2 class="ul-section-title">What You Will Walk Away With</h2>
+          </div>
+        </div>
+        <div class="ul-lh-outcomes">
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-star"></i></div>
+            <div>
+              <h5>Practical Job-Ready Skills</h5>
+              <p>Apply MEAL, project management, and research skills directly in your work.</p>
+            </div>
+          </div>
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-package"></i></div>
+            <div>
+              <h5>A Professional Portfolio</h5>
+              <p>A body of work products that demonstrate your competence to employers.</p>
+            </div>
+          </div>
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-check-mark"></i></div>
+            <div>
+              <h5>Optional Certification</h5>
+              <p>A KIID Africa Learning Hub certificate of completion (subject to requirements).</p>
+            </div>
+          </div>
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-team"></i></div>
+            <div>
+              <h5>Mentor Network</h5>
+              <p>Connections with experienced practitioners and a peer learning community.</p>
+            </div>
+          </div>
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-dots"></i></div>
+            <div>
+              <h5>Data Confidence</h5>
+              <p>Comfort collecting, analysing, and presenting data for decision-making.</p>
+            </div>
+          </div>
+          <div class="ul-lh-outcome wow animate__fadeInUp">
+            <div class="ul-lh-outcome-icon"><i class="flaticon-relationship"></i></div>
+            <div>
+              <h5>Career Direction</h5>
+              <p>A clear pathway into or upward within the development and humanitarian sector.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EXPECTED OUTCOMES SECTION END -->
+
+    <!-- FUTURE ONLINE LEARNING PLATFORM SECTION START -->
+    <section class="ul-section-spacing">
+      <div class="ul-container">
+        <div class="ul-lh-future wow animate__fadeInUp">
+          <span class="ul-lh-future-tag"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Coming Soon</span>
+          <h2 class="ul-lh-future-title">Our Online Learning Platform Is On the Way</h2>
+          <p class="ul-lh-future-descr">
+            The KIID Africa Learning Hub is currently delivered in person. We are building a
+            dedicated online learning platform so that soon, participants everywhere will be able
+            to join the programme fully online.
+          </p>
+          <div class="ul-lh-future-list">
+            <div class="ul-lh-future-item"><i class="flaticon-costumer"></i> Register online</div>
+            <div class="ul-lh-future-item"><i class="flaticon-double-quotes"></i> Access lessons</div>
+            <div class="ul-lh-future-item"><i class="flaticon-check"></i> Submit assignments</div>
+            <div class="ul-lh-future-item"><i class="flaticon-dots"></i> Track progress</div>
+            <div class="ul-lh-future-item"><i class="flaticon-check-mark"></i> Earn certificates</div>
+          </div>
+          <button type="button" class="ul-enroll-btn" disabled
+            data-tooltip="Enrollments are currently physical, online enrollment will open when our online learning platform launches.">
+            <span class="ul-enroll-btn-pulse"></span>
+            <span class="ul-enroll-btn-icon"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i></span>
+            Enroll Now
+            <span class="ul-beta-badge" data-tooltip="Enrollments are currently physical, online enrollment will open when our online learning platform launches.">Beta</span>
+          </button>
+          <p style="color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 18px; margin-bottom: 0;">
+            Enrollments are currently physical. Online enrollment will open when our online learning platform launches.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- FUTURE ONLINE LEARNING PLATFORM SECTION END -->
+
+    <!-- CTA SECTION START -->
+    <section class="ul-cta">
+      <div class="ul-container">
+        <span class="ul-section-sub-title">Have Questions?</span>
+        <h2 class="ul-cta-title">
+          Talk to Us About the Learning Hub
+        </h2>
+        <a href="contact.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+          Contact Us</a>
+      </div>
+      <img src="assets/img/cta-vector.svg" alt="Vector" class="ul-cta-vector" />
+    </section>
+    <!-- CTA SECTION END -->
+  </main>
+
+  <!-- FOOTER SECTION START -->
+  <footer class="ul-footer">
+    <div class="ul-footer-top">
+      <div class="ul-footer-container">
+        <div class="ul-footer-top-contact-infos">
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-pin"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Address</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                Abuja: Behind Odogwu Palace Hotel, Wumba, Apo
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-email"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Send Email</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="mailto:info@kiid.africa ">info@kiid.africa
+                </a>
+              </h5>
+            </div>
+          </div>
+
+          <!-- single info -->
+          <div class="ul-footer-top-contact-info">
+            <!-- icon -->
+            <div class="ul-footer-top-contact-info-icon">
+              <div class="ul-footer-top-contact-info-icon-inner">
+                <i class="flaticon-telephone-call-1"></i>
+              </div>
+            </div>
+            <!-- txt -->
+            <div class="ul-footer-top-contact-info-txt">
+              <span class="ul-footer-top-contact-info-label">Contact Us</span>
+              <h5 class="ul-footer-top-contact-info-address">
+                <a href="tel:+2349029940489">+234 902 994 0489</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-footer-middle">
+      <div class="ul-footer-container">
+        <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+          <div class="ul-footer-about">
+            <a href="index.html" class="custom-logo white">
+              <img src="assets/img/logo-icon.jpeg" alt="KiiD logo" style="width: 80px; height: 80px" />
+              <span class="logo-text" style="
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                      'Trebuchet MS', sans-serif;
+                    margin-left: -5px;
+                    font-size: 32px;
+                    color: #fff;
+                  ">KiiD</span>
+            </a>
+            <p class="ul-footer-about-txt">
+              Kingscity Initiative for Integrated Development (KiiD) is
+              dedicated to building thriving communities through healthcare
+              access, environmental sustainability, and socio-economic
+              empowerment.
+            </p>
+            <div class="ul-footer-socials">
+              <a href="https://x.com/KingscityDev?t=c6rH7i3a0naCZeDF5uYq4A&s=09" target="_blank"><i
+                  class="flaticon-twitter"></i></a>
+              <a href="https://www.instagram.com/kingscity.dev?igsh=MWZvdXpnY3ZxMDI3Yw==" target="_blank"><i
+                  class="flaticon-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Our Programs</a>
+              <a href="krat.html">KRAT</a>
+              <a href="learning-hub.html">Learning Hub</a>
+              <a href="news.html">News & Events</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Impact</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="about.html#our-impact">Over 1,000 people reached through health outreach</a>
+              <a href="about.html#our-impact">3,000+ youth educated on climate action</a>
+              <a href="about.html#our-impact">150+ individuals trained in market-relevant skills</a>
+              <a href="about.html#our-impact">5,000+ trees planted for environmental restoration</a>
+            </div>
+          </div>
+
+          <div class="ul-footer-widget ul-nwsltr-widget">
+            <h3 class="ul-footer-widget-title">Get Involved</h3>
+            <div class="ul-footer-widget-links ul-footer-contact-links">
+              <a href="mailto:info@kiid.africa "><i class="flaticon-mail"></i> info@kiid.africa
+              </a>
+              <a href="tel:+2349029940489"><i class="flaticon-telephone-call"></i> +234 902 994 0489</a>
+            </div>
+            <form class="ul-nwsltr-form">
+              <div class="top">
+                <input type="email" name="email" id="nwsltr-email" placeholder="Your Email Address"
+                  class="ul-nwsltr-input" required />
+                <button type="submit"><i class="flaticon-next"></i></button>
+              </div>
+
+              <div class="agreement">
+                <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                  <input type="checkbox" name="agreement" id="nwsltr-agreement" required />
+                  <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
+                  <span class="ul-checkbox-txt">I agree with the
+                    <a href="privacy-policy.html">Privacy Policy</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div class="ul-footer-widget">
+            <h3 class="ul-footer-widget-title">Our Offices</h3>
+
+            <div class="ul-footer-widget-links">
+              <a href="contact.html">
+                <strong>Edo State:</strong> No 2 Ogbeide Ihama Avenue, GRA,
+                Benin City
+              </a>
+              <a href="contact.html">
+                <strong>Abuja:</strong> Behind Odogwu Palace Hotel, Wumba, Apo
+              </a>
+              <a href="contact.html">
+                <strong>Enugu State:</strong> No 87 Ogurugu Road, Nsukka
+              </a>
+              <a href="tel:+2349029940489">+234 902 994 0489</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer bottom -->
+    <div class="ul-footer-bottom">
+      <div class="ul-footer-container">
+        <div class="ul-footer-bottom-wrapper">
+          <p class="copyright-txt">
+            &copy; <span id="footer-copyright-year"></span> Kingscity
+            Initiative for Integrated Development. All rights reserved
+          </p>
+          <div class="ul-footer-bottom-nav">
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vector -->
+    <div class="ul-footer-vectors">
+      <img src="assets/img/footer-vector-img.png" alt="Footer Image" class="ul-footer-vector-1" />
+    </div>
+  </footer>
+  <!-- FOOTER SECTION END -->
+
+  <!-- libraries JS -->
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/splide/splide.min.js"></script>
+  <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+  <script src="assets/vendor/animate-wow/wow.min.js"></script>
+  <script src="assets/vendor/splittype/index.min.js"></script>
+  <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+  <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+  <!-- custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/form-handler.js"></script>
+</body>
+
+</html>
